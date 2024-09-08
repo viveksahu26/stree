@@ -19,6 +19,8 @@ func ParseJSON(filename string) (Package, error) {
 	if err != nil {
 		return root, err
 	}
+
+	// convert JSON data into a Go struct.
 	err = json.Unmarshal(data, &root)
 	return root, err
 }

@@ -245,3 +245,18 @@ $ tree json <sbomqs-sca.json>
         ├── sigs.k8s.io/yaml
         └── toolchain
 ```
+
+## Software Supply Chain Security usecase:
+
+```bash
+# generate list of componenets in json format from go modules
+$ opensca-cli -path go.mod  -out tree-sca.json
+
+# Now, convert that components into directory structure for easy visualization
+$ go run cmd/tree/main.go json --out tree-output.json  tree-sca.json
+
+```
+
+**NOTE**:
+
+- Install opensca-cli tool from [here](https://github.com/XmirrorSecurity/OpenSCA-cli/releases).

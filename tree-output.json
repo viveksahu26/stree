@@ -1,0 +1,11 @@
+└── 
+    └── github.com/viveksahu26/tree
+        ├── github.com/inconshreveable/mousetrap
+        ├── github.com/spf13/cobra
+        │   ├── github.com/cpuguy83/go-md2man/v2
+        │   │   └── github.com/russross/blackfriday/v2
+        │   └── gopkg.in/yaml.v3
+        │       └── gopkg.in/check.v1
+        ├── github.com/spf13/pflag
+        └── go
+            └── toolchain

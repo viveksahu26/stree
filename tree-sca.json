@@ -1,0 +1,119 @@
+{
+  "task_info": {
+    "tool_version": "v3.0.5",
+    "app_name": "go.mod",
+    "size": 198,
+    "start_time": "2024-09-08 20:21:01",
+    "end_time": "2024-09-08 20:21:01",
+    "cost_time": 0.004492798,
+    "error": "not config vuln database origin"
+  },
+  "language": "Golang",
+  "id": "56551245790740480",
+  "direct": true,
+  "paths": [
+    "go.mod"
+  ],
+  "children": [
+    {
+      "name": "github.com/viveksahu26/tree",
+      "language": "Golang",
+      "id": "56551245790740481",
+      "direct": true,
+      "paths": [
+        "go.mod/[github.com/viveksahu26/tree:]"
+      ],
+      "children": [
+        {
+          "name": "github.com/inconshreveable/mousetrap",
+          "version": "v1.1.0",
+          "language": "Golang",
+          "id": "56551245790740482",
+          "paths": [
+            "go.mod/[github.com/viveksahu26/tree:]/[github.com/inconshreveable/mousetrap:v1.1.0]"
+          ]
+        },
+        {
+          "name": "github.com/spf13/cobra",
+          "version": "v1.8.1",
+          "language": "Golang",
+          "id": "56551245790740483",
+          "paths": [
+            "go.mod/[github.com/viveksahu26/tree:]/[github.com/spf13/cobra:v1.8.1]"
+          ],
+          "children": [
+            {
+              "name": "github.com/cpuguy83/go-md2man/v2",
+              "version": "v2.0.4",
+              "language": "Golang",
+              "id": "56551245790740486",
+              "paths": [
+                "go.mod/[github.com/viveksahu26/tree:]/[github.com/spf13/cobra:v1.8.1]/[github.com/cpuguy83/go-md2man/v2:v2.0.4]"
+              ],
+              "children": [
+                {
+                  "name": "github.com/russross/blackfriday/v2",
+                  "version": "v2.1.0",
+                  "language": "Golang",
+                  "id": "56551245790740489",
+                  "paths": [
+                    "go.mod/[github.com/viveksahu26/tree:]/[github.com/spf13/cobra:v1.8.1]/[github.com/cpuguy83/go-md2man/v2:v2.0.4]/[github.com/russross/blackfriday/v2:v2.1.0]"
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "gopkg.in/yaml.v3",
+              "version": "v3.0.1",
+              "language": "Golang",
+              "id": "56551245790740487",
+              "paths": [
+                "go.mod/[github.com/viveksahu26/tree:]/[github.com/spf13/cobra:v1.8.1]/[gopkg.in/yaml.v3:v3.0.1]"
+              ],
+              "children": [
+                {
+                  "name": "gopkg.in/check.v1",
+                  "version": "v0.0.0-20161208181325-20d25e280405",
+                  "language": "Golang",
+                  "id": "56551245790740490",
+                  "paths": [
+                    "go.mod/[github.com/viveksahu26/tree:]/[github.com/spf13/cobra:v1.8.1]/[gopkg.in/yaml.v3:v3.0.1]/[gopkg.in/check.v1:v0.0.0-20161208181325-20d25e280405]"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "github.com/spf13/pflag",
+          "version": "v1.0.5",
+          "language": "Golang",
+          "id": "56551245790740484",
+          "paths": [
+            "go.mod/[github.com/viveksahu26/tree:]/[github.com/spf13/pflag:v1.0.5]"
+          ]
+        },
+        {
+          "name": "go",
+          "version": "1.21.4",
+          "language": "Golang",
+          "id": "56551245790740485",
+          "paths": [
+            "go.mod/[github.com/viveksahu26/tree:]/[go:1.21.4]"
+          ],
+          "children": [
+            {
+              "name": "toolchain",
+              "version": "go1.21.4",
+              "language": "Golang",
+              "id": "56551245790740488",
+              "paths": [
+                "go.mod/[github.com/viveksahu26/tree:]/[go:1.21.4]/[toolchain:go1.21.4]"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
