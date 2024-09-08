@@ -15,8 +15,17 @@ func Json() *cobra.Command {
 		Use:          "json",
 		Short:        "Cconvert json into tree structure",
 		SilenceUsage: true,
-		Example:      ` tree json --file=<json file>`,
-		Args:         cobra.MinimumNArgs(1),
+		Example: ` tree json [--out <path>] <json file>
+
+	# create a tree directory like structure for the provided json
+	tree json example-sca.json
+
+	# create a tree directory like structure for the provided json and output into provided file
+	tree json -o <output-new-file.json>  example-sca.json
+
+		
+		`,
+		Args: cobra.MinimumNArgs(1),
 		RunE: func(_ *cobra.Command, args []string) error {
 			if err := json.JsonCmd(*o, args); err != nil {
 				return fmt.Errorf("coverting json into tree structure for file %v: %w", args, err)

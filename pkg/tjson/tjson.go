@@ -24,16 +24,18 @@ func ParseJSON(filename string) (Package, error) {
 }
 
 // PrintTree recursively prints the tree structure with pointers
-func PrintTree(pkg Package, prefix string, isLast bool) {
+func PrintTree(pkg Package, prefix string, isLast bool) string {
+	var result string
 	if isLast {
-		fmt.Println(prefix + "└── " + pkg.Name)
+		result += fmt.Sprintf("%s└── %s\n", prefix, pkg.Name)
 		prefix += "    "
 	} else {
-		fmt.Println(prefix + "├── " + pkg.Name)
+		result += fmt.Sprintf("%s├── %s\n", prefix, pkg.Name)
 		prefix += "│   "
 	}
 
 	for i, child := range pkg.Children {
-		PrintTree(child, prefix, i == len(pkg.Children)-1)
+		result += PrintTree(child, prefix, i == len(pkg.Children)-1)
 	}
+	return result
 }
