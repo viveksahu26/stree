@@ -1,4 +1,4 @@
-package json
+package tjson
 
 import (
 	"encoding/json"

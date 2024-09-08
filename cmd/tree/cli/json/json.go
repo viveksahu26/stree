@@ -4,7 +4,7 @@ import (
 	"fmt"
 
 	"github.com/viveksahu26/tree/cmd/tree/cli/options"
-	tjson "github.com/viveksahu26/tree/pkg/json/"
+	"github.com/viveksahu26/tree/pkg/tjson"
 )
 
 func JsonCmd(jsonOption options.JsonOptions, args []string) error {
