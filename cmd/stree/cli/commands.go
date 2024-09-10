@@ -19,6 +19,7 @@ func New() *cobra.Command {
 
 	// Add sub-commands
 	cmd.AddCommand(Json())
+	cmd.AddCommand(Sbom())
 
 	return cmd
 }
