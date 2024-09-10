@@ -1,4 +1,4 @@
-module github.com/viveksahu26/tree
+module github.com/viveksahu26/stree
 
 go 1.21.4
 

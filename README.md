@@ -1,6 +1,6 @@
-# tree
+# stree
 
-tree is tool which convert json structure into directory structure. It's simialr to `tree` command in linux. 
+stree is tool which convert json structure into  directory tree or file tree. It's similar to `tree` command in linux.
 For example:
 
 ```bash
@@ -25,9 +25,9 @@ $ tree
 5 directories, 10 files
 ```
 
-## Why tree ?
+## Why stree ?
 
-Basically Json structure has parent-children kind of strucutre. In oder to visualize the relationship b/w parents-child, the tree comes into.
+Basically Json structure has parent-children kind of strucutre. In oder to visualize the relationship b/w parents-child, the stree comes into.
 
 In the world of software and technology, every software has toms of dependencies and each dependecies has further dependencies. For a software supply chain enthusaist, it's a cusrious and required thing to visualize it's project depedencies. For now, this tool support json format.
 
@@ -36,7 +36,7 @@ In the world of software and technology, every software has toms of dependencies
 
 ```bash
 
-$ tree json <sbomqs-sca.json>
+$ stree json <sbomqs-sca.json>
 └── 
     └── github.com/interlynk-io/sbomqs
         ├── github.com/CycloneDX/cyclonedx-go
@@ -246,7 +246,7 @@ $ tree json <sbomqs-sca.json>
         └── toolchain
 ```
 
-## Software Supply Chain Security usecase:
+## Software Supply Chain Security usecases
 
 ```bash
 # generate list of componenets in json format from go modules

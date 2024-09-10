@@ -3,7 +3,7 @@ package main
 import (
 	"log"
 
-	"github.com/viveksahu26/tree/cmd/tree/cli"
+	"github.com/viveksahu26/stree/cmd/stree/cli"
 )
 
 func main() {

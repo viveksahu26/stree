@@ -4,8 +4,8 @@ import (
 	"fmt"
 
 	"github.com/spf13/cobra"
-	"github.com/viveksahu26/tree/cmd/tree/cli/json"
-	"github.com/viveksahu26/tree/cmd/tree/cli/options"
+	"github.com/viveksahu26/stree/cmd/stree/cli/json"
+	"github.com/viveksahu26/stree/cmd/stree/cli/options"
 )
 
 func Json() *cobra.Command {
