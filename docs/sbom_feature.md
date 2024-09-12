@@ -9,6 +9,7 @@ An SBOM (Software Bill of Materials) provides detailed information about the com
 - Provide SBOM via arguments.
   - Using Command: `$ stree sbom <file>`
 - Get a SBOM.
+  - validate the file path
   - Read the SBOM file.
 - Parse the SBOM.
 - Convert the parse SBOM information into JSON format.
