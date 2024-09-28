@@ -4,11 +4,17 @@ import (
 	"encoding/json"
 	"fmt"
 	"os"
+
+	"github.com/rivo/tview"
 )
 
 // Package represents a package with its name and children
 type Package struct {
 	Name     string    `json:"name"`
+	Version  string    `json:"version,omitempty"`
+	Language string    `json:"language"`
+	ID       string    `json:"id"`
+	Paths    []string  `json:"paths"`
 	Children []Package `json:"children"`
 }
 
@@ -40,4 +46,24 @@ func PrintTree(pkg Package, prefix string, isLast bool) string {
 		result += PrintTree(child, prefix, i == len(pkg.Children)-1)
 	}
 	return result
+}
+
+// build parent and it's child nodes
+func BuildTreeNode(pkg Package) *tview.TreeNode {
+	nodeText := pkg.Name
+
+	// if pkg.Version != "" {
+	// 	nodeText += " (" + pkg.Version + ")"
+	// }
+	tv := tview.NewTreeNode(nodeText)
+
+	node := tv.SetReference(pkg)
+
+	for _, child := range pkg.Children {
+
+		childNode := BuildTreeNode(child)
+		node.AddChild(childNode)
+	}
+
+	return node
 }

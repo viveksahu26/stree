@@ -2,8 +2,9 @@ package json
 
 import (
 	"fmt"
-	"os"
+	"log"
 
+	"github.com/rivo/tview"
 	"github.com/viveksahu26/stree/cmd/stree/cli/options"
 	"github.com/viveksahu26/stree/pkg/tjson"
 )
@@ -16,15 +17,21 @@ func JsonCmd(jo options.JsonOptions, args []string) error {
 		fmt.Println("Error parsing JSON:", err)
 		return err
 	}
-	// (root, "", true)
-	treeOutput := tjson.PrintTree(root, "", true)
-	if jo.Out != "" {
-		err = os.WriteFile(jo.Out, []byte(treeOutput), 0o644)
-		if err != nil {
-			return fmt.Errorf("error writing to output file: %w", err)
+
+	rootNode := tjson.BuildTreeNode(root)
+	treeView := tview.NewTreeView().SetRoot(rootNode).SetCurrentNode(rootNode)
+
+	app := tview.NewApplication()
+	treeView.SetSelectedFunc(func(node *tview.TreeNode) {
+		if node.IsExpanded() {
+			node.Collapse()
+		} else {
+			node.Expand()
 		}
-	} else {
-		fmt.Print(treeOutput)
+	})
+
+	if err := app.SetRoot(treeView, true).Run(); err != nil {
+		log.Fatalf("Error running application: %v\n", err)
 	}
 	return nil
 }
