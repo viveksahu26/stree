@@ -60,7 +60,10 @@ var colors = []tcell.Color{
 	tcell.ColorPink,
 }
 
-// build parent and it's child nodes
+// The function creates a tree node for a given package.
+// It sets the text and color of the node based on the package name and depth.
+// It recursively creates and adds child nodes for each child package.
+// The result is a tree structure that represents the hierarchy of packages, with each node correctly linked to its children and visually distinguished by color based on depth.
 func BuildTreeNode(pkg Package, depth int) *tview.TreeNode {
 	nodeText := pkg.Name
 	color := colors[depth%len(colors)]
