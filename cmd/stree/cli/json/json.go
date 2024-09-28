@@ -18,7 +18,7 @@ func JsonCmd(jo options.JsonOptions, args []string) error {
 		return err
 	}
 
-	rootNode := tjson.BuildTreeNode(root)
+	rootNode := tjson.BuildTreeNode(root, 0)
 	treeView := tview.NewTreeView().SetRoot(rootNode).SetCurrentNode(rootNode)
 
 	app := tview.NewApplication()

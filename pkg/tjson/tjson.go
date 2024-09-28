@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"os"
 
+	"github.com/gdamore/tcell/v2"
 	"github.com/rivo/tview"
 )
 
@@ -48,20 +49,27 @@ func PrintTree(pkg Package, prefix string, isLast bool) string {
 	return result
 }
 
+var colors = []tcell.Color{
+	tcell.ColorYellow,
+	tcell.ColorRed,
+	tcell.ColorGreen,
+	tcell.ColorPurple,
+	tcell.ColorBlue,
+	tcell.ColorDarkCyan,
+	tcell.ColorDarkOrange,
+	tcell.ColorPink,
+}
+
 // build parent and it's child nodes
-func BuildTreeNode(pkg Package) *tview.TreeNode {
+func BuildTreeNode(pkg Package, depth int) *tview.TreeNode {
 	nodeText := pkg.Name
+	color := colors[depth%len(colors)]
 
-	// if pkg.Version != "" {
-	// 	nodeText += " (" + pkg.Version + ")"
-	// }
-	tv := tview.NewTreeNode(nodeText)
-
+	tv := tview.NewTreeNode(nodeText).SetColor(color)
 	node := tv.SetReference(pkg)
 
 	for _, child := range pkg.Children {
-
-		childNode := BuildTreeNode(child)
+		childNode := BuildTreeNode(child, depth+1)
 		node.AddChild(childNode)
 	}
 
