@@ -1,5 +1,6 @@
+fileName:  stree-tree-sca.json
 └── 
-    └── github.com/viveksahu26/tree
+    └── github.com/viveksahu26/stree
         ├── github.com/inconshreveable/mousetrap
         ├── github.com/spf13/cobra
         │   ├── github.com/cpuguy83/go-md2man/v2
