@@ -15,13 +15,16 @@ func Sbom() *cobra.Command {
 		Use:          "sbom",
 		Short:        "represent SBOM Dependencies as a directory tree or file tree",
 		SilenceUsage: true,
-		Example: `stree sbom [--out <path>] <sbom_file_path>
+		Example: `stree sbom [--dependencies direct|indirect] <sbom file>
 
-	# create a directory tree or file tree structure for the provided sbom
-	stree sbom sbom.spdx.json
-
-	# create a directory tree or file tree structure for the provided sbom and output into provided file
-	stree sbom -o <output-new-file.json>  sbom.spdx.json
+# create a directory tree or file tree structure for the provided sbom
+  stree sbom sbom.spdx.json
+		
+# create a directory tree or file tree structure for the provided sbom and output into provided file
+  stree sbom --dependencies indirect example-sbom.json
+		
+# create a tree directory like structure for the provided SBOM with only primary dependencies
+  stree sbom --primary example-sbom.json
 
 		
 		`,
