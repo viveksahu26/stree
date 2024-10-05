@@ -12,13 +12,14 @@ import (
 func JsonCmd(jo options.JsonOptions, args []string) error {
 	fileName := args[0]
 	fmt.Println("fileName: ", fileName)
+	doesNodenameToBeShort := jo.Name
 	root, err := tjson.ParseJSON(fileName)
 	if err != nil {
 		fmt.Println("Error parsing JSON:", err)
 		return err
 	}
 
-	rootNode := tjson.BuildTreeNode(root, 0)
+	rootNode := tjson.BuildTreeNode(root, 0, doesNodenameToBeShort)
 	treeView := tview.NewTreeView().SetRoot(rootNode).SetCurrentNode(rootNode)
 
 	app := tview.NewApplication()

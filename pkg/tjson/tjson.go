@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"os"
+	"strings"
 
 	"github.com/gdamore/tcell/v2"
 	"github.com/rivo/tview"
@@ -64,17 +65,37 @@ var colors = []tcell.Color{
 // It sets the text and color of the node based on the package name and depth.
 // It recursively creates and adds child nodes for each child package.
 // The result is a tree structure that represents the hierarchy of packages, with each node correctly linked to its children and visually distinguished by color based on depth.
-func BuildTreeNode(pkg Package, depth int) *tview.TreeNode {
+func BuildTreeNode(pkg Package, depth int, doesNodenameToBeShort bool) *tview.TreeNode {
 	nodeText := pkg.Name
+	if doesNodenameToBeShort {
+		nodeText = ShortName(nodeText)
+	}
 	color := colors[depth%len(colors)]
 
 	tv := tview.NewTreeNode(nodeText).SetColor(color)
 	node := tv.SetReference(pkg)
 
 	for _, child := range pkg.Children {
-		childNode := BuildTreeNode(child, depth+1)
+		childNode := BuildTreeNode(child, depth+1, doesNodenameToBeShort)
 		node.AddChild(childNode)
 	}
 
 	return node
+}
+
+func ShortName(longName string) string {
+	parts := strings.Split(longName, "/")
+	var shortname string
+	if len(parts) > 0 {
+		shortname = parts[0]
+
+		if len(parts) > 1 {
+			shortname = parts[0] + "/" + parts[1]
+		}
+
+		if len(parts) > 2 && parts[1] != "" && parts[2] != "" {
+			shortname = parts[1] + "/" + parts[2]
+		}
+	}
+	return shortname
 }
