@@ -25,12 +25,29 @@ $ tree
 5 directories, 10 files
 ```
 
+## Getting Started: 101
+
+```bash
+# clone repository
+$ git clone git@github.com:viveksahu26/stree.git
+
+$ cd stree/cmd/stree/
+
+# build your binary
+$ go build
+
+# For help
+$ ./stree -h
+
+# get tree-view structure dependencies for your SBOM
+$ ./stree sbom  ../../samples/sbomqs-fossa-cyclonedx.json
+```
+
 ## Why stree ?
 
 Basically Json structure has parent-children kind of strucutre. In oder to visualize the relationship b/w parents-child, the stree comes into.
 
 In the world of software and technology, every software has toms of dependencies and each dependecies has further dependencies. For a software supply chain enthusaist, it's a cusrious and required thing to visualize it's project depedencies. For now, this tool support json format.
-
 
 ## How to use it ??
 
