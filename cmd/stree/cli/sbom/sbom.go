@@ -35,6 +35,7 @@ func SbomCmd(so options.SbomOptions, args []string) error {
 		rootRef := sbom.Dependencies[0].Ref
 		rootNode = tsbom.BuildSBOMTreeNode(rootRef, sbom, 0, dependencies, primary, doesNodenameToBeShort)
 	} else {
+		// rootNode = tview.NewTreeNode("SBOM").SetExpanded(false)
 		rootNode = tview.NewTreeNode("SBOM")
 		for _, dep := range sbom.Dependencies {
 			childNode := tsbom.BuildSBOMTreeNode(dep.Ref, sbom, 0, dependencies, primary, doesNodenameToBeShort)

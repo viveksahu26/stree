@@ -56,7 +56,10 @@ func BuildSBOMTreeNode(ref string, sbom SBOM, depth int, dependencies string, pr
 	}
 	color := colors[depth%len(colors)]
 
-	tv := tview.NewTreeNode(nodeText).SetColor(color)
+	// Expand first level nodes, collapse others
+	expanded := depth == 0
+
+	tv := tview.NewTreeNode(nodeText).SetColor(color).SetExpanded(expanded)
 	node := tv.SetReference(ref)
 
 	for _, dep := range sbom.Dependencies {
@@ -68,6 +71,5 @@ func BuildSBOMTreeNode(ref string, sbom SBOM, depth int, dependencies string, pr
 			break
 		}
 	}
-
 	return node
 }
