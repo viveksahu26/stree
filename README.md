@@ -115,13 +115,13 @@ $ stree json <stree-tree-sca.json>
 
 ### Images
 
-![alt text](image.png)
+![alt text](images/image.png)
 
-![alt text](image-5.png)
+![alt text](images/image-5.png)
 
-![alt text](image-2.png)
+![alt text](images/image-2.png)
 
-![alt text](image-3.png)
+![alt text](images/image-3.png)
 
 ## Software Supply Chain Security usecases
 
