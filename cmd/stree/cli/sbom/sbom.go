@@ -22,6 +22,7 @@ func SbomCmd(so options.SbomOptions, args []string) error {
 	fmt.Println("fileName: ", fileName)
 	dependencies := so.Dependencies
 	primary := so.Primary
+	doesNodenameToBeShort := so.Name
 
 	sbom, err := tsbom.ParseSBOM(fileName)
 	if err != nil {
@@ -32,11 +33,11 @@ func SbomCmd(so options.SbomOptions, args []string) error {
 	var rootNode *tview.TreeNode
 	if primary {
 		rootRef := sbom.Dependencies[0].Ref
-		rootNode = tsbom.BuildSBOMTreeNode(rootRef, sbom, 0, dependencies, primary)
+		rootNode = tsbom.BuildSBOMTreeNode(rootRef, sbom, 0, dependencies, primary, doesNodenameToBeShort)
 	} else {
 		rootNode = tview.NewTreeNode("SBOM")
 		for _, dep := range sbom.Dependencies {
-			childNode := tsbom.BuildSBOMTreeNode(dep.Ref, sbom, 0, dependencies, primary)
+			childNode := tsbom.BuildSBOMTreeNode(dep.Ref, sbom, 0, dependencies, primary, doesNodenameToBeShort)
 			rootNode.AddChild(childNode)
 		}
 	}

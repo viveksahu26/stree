@@ -7,6 +7,7 @@ import (
 
 	"github.com/gdamore/tcell/v2"
 	"github.com/rivo/tview"
+	"github.com/viveksahu26/stree/pkg/tjson"
 )
 
 type Component struct {
@@ -25,14 +26,14 @@ type Dependency struct {
 }
 
 var colors = []tcell.Color{
-	tcell.ColorYellow,
-	tcell.ColorRed,
 	tcell.ColorGreen,
 	tcell.ColorPurple,
 	tcell.ColorBlue,
 	tcell.ColorDarkCyan,
 	tcell.ColorDarkOrange,
 	tcell.ColorPink,
+	tcell.ColorYellow,
+	tcell.ColorRed,
 }
 
 func ParseSBOM(filename string) (SBOM, error) {
@@ -46,10 +47,13 @@ func ParseSBOM(filename string) (SBOM, error) {
 	return sbom, err
 }
 
-func BuildSBOMTreeNode(ref string, sbom SBOM, depth int, dependencies string, primary bool) *tview.TreeNode {
+func BuildSBOMTreeNode(ref string, sbom SBOM, depth int, dependencies string, primary bool, doesNodenameToBeShort bool) *tview.TreeNode {
 	nodeText := ref
 	parts := strings.Split(nodeText, "@")
 	nodeText = parts[0]
+	if doesNodenameToBeShort {
+		nodeText = tjson.ShortName(nodeText)
+	}
 	color := colors[depth%len(colors)]
 
 	tv := tview.NewTreeNode(nodeText).SetColor(color)
@@ -58,7 +62,7 @@ func BuildSBOMTreeNode(ref string, sbom SBOM, depth int, dependencies string, pr
 	for _, dep := range sbom.Dependencies {
 		if dep.Ref == ref {
 			for _, childRef := range dep.DependsOn {
-				childNode := BuildSBOMTreeNode(childRef, sbom, depth+1, dependencies, primary)
+				childNode := BuildSBOMTreeNode(childRef, sbom, depth+1, dependencies, primary, doesNodenameToBeShort)
 				node.AddChild(childNode)
 			}
 			break

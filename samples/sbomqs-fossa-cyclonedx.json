@@ -1,0 +1,376 @@
+{
+    "$schema": "http://cyclonedx.org/schema/bom-1.4.schema.json",
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.4",
+    "version": 1,
+    "serialNumber": "urn:uuid:59449365-e065-4fbe-aec6-6b2f852e8147",
+    "metadata": {
+      "timestamp": "2024-07-24T14:12:32.077Z",
+      "component": {
+        "type": "application",
+        "name": "git@github.com:interlynk/sbomqs.git",
+        "version": "14e7376fa2b00c102a9ba89fd5ccc7cf26f2f255",
+        "bom-ref": "github.com:viveksahu26/sbomqs.git$14e7376fa2b00c102a9ba89fd5ccc7cf26f2f255",
+        "description": "Project uploaded via Provided Builds from fossa-cli"
+      }
+    },
+    "components": [
+      {
+        "type": "library",
+        "name": "client-go",
+        "version": "2570042a517e97bc9ec0c617706a89a0edad4426",
+        "bom-ref": "pkg:github/DependencyTrack/client-go@2570042a517e97bc9ec0c617706a89a0edad4426",
+        "purl": "pkg:github/DependencyTrack/client-go@2570042a517e97bc9ec0c617706a89a0edad4426"
+      },
+      {
+        "type": "library",
+        "name": "cobra",
+        "version": "e94f6d0dd9a5e5738dca6bce03c4b1207ffbc0ec",
+        "bom-ref": "pkg:github/spf13/cobra@e94f6d0dd9a5e5738dca6bce03c4b1207ffbc0ec",
+        "purl": "pkg:github/spf13/cobra@e94f6d0dd9a5e5738dca6bce03c4b1207ffbc0ec"
+      },
+      {
+        "type": "library",
+        "name": "cyclonedx-go",
+        "version": "98a070df0171240c53e7e1c3c46640eb9b257e08",
+        "bom-ref": "pkg:github/CycloneDX/cyclonedx-go@98a070df0171240c53e7e1c3c46640eb9b257e08",
+        "purl": "pkg:github/CycloneDX/cyclonedx-go@98a070df0171240c53e7e1c3c46640eb9b257e08"
+      },
+      {
+        "type": "library",
+        "name": "go-github",
+        "version": "0a6474043f9f14c77ba6fa77d1b377a7538a4c8c",
+        "bom-ref": "pkg:github/google/go-github@0a6474043f9f14c77ba6fa77d1b377a7538a4c8c",  
+        "purl": "pkg:github/google/go-github@0a6474043f9f14c77ba6fa77d1b377a7538a4c8c"
+      },
+      {
+        "type": "library",
+        "name": "go-spdx",
+        "version": "eacf4f37582f0c1b8f0086816ad1afea74d1ac3f",
+        "bom-ref": "pkg:github/github/go-spdx@eacf4f37582f0c1b8f0086816ad1afea74d1ac3f",
+        "purl": "pkg:github/github/go-spdx@eacf4f37582f0c1b8f0086816ad1afea74d1ac3f"
+      },
+      {
+        "type": "library",
+        "name": "lo",
+        "version": "151a075ecca084ddbb519fafd513002df0632716",
+        "bom-ref": "pkg:github/samber/lo@151a075ecca084ddbb519fafd513002df0632716",
+        "purl": "pkg:github/samber/lo@151a075ecca084ddbb519fafd513002df0632716"
+      },
+      {
+        "type": "library",
+        "name": "packageurl-go",
+        "version": "7cb81af9593b9512bb946c55c85609948c48aab9",
+        "bom-ref": "pkg:github/package-url/packageurl-go@7cb81af9593b9512bb946c55c85609948c48aab9",
+        "purl": "pkg:github/package-url/packageurl-go@7cb81af9593b9512bb946c55c85609948c48aab9"
+      },
+      {
+        "type": "library",
+        "name": "release-utils",
+        "version": "24b0b7a327387393fa4933add6b2c9f5718cade0",
+        "bom-ref": "pkg:github/kubernetes-sigs/release-utils@24b0b7a327387393fa4933add6b2c9f5718cade0",
+        "purl": "pkg:github/kubernetes-sigs/release-utils@24b0b7a327387393fa4933add6b2c9f5718cade0"
+      },
+      {
+        "type": "library",
+        "name": "semver",
+        "version": "e06051f8fcc4c8b4a4990c337b9862a2448722e5",
+        "bom-ref": "pkg:github/Masterminds/semver@e06051f8fcc4c8b4a4990c337b9862a2448722e5",
+        "purl": "pkg:github/Masterminds/semver@e06051f8fcc4c8b4a4990c337b9862a2448722e5"
+      },
+      {
+        "type": "library",
+        "name": "tablewriter",
+        "version": "c7d2a8a09b076b70918308a3cd95464b2ae3b5d8",
+        "bom-ref": "pkg:github/olekukonko/tablewriter@c7d2a8a09b076b70918308a3cd95464b2ae3b5d8",
+        "description": "ASCII table in golang",
+        "purl": "pkg:github/olekukonko/tablewriter@c7d2a8a09b076b70918308a3cd95464b2ae3b5d8"
+      },
+      {
+        "type": "library",
+        "name": "tools-golang",
+        "version": "9db247b854b9634d0109153d515fd1a9efd5a1b1",
+        "bom-ref": "pkg:github/spdx/tools-golang@9db247b854b9634d0109153d515fd1a9efd5a1b1",
+        "purl": "pkg:github/spdx/tools-golang@9db247b854b9634d0109153d515fd1a9efd5a1b1"
+      },
+      {
+        "type": "library",
+        "name": "uuid",
+        "version": "0f11ee6918f41a04c201eceeadf612a377bc7fbc",
+        "bom-ref": "pkg:github/google/uuid@0f11ee6918f41a04c201eceeadf612a377bc7fbc",
+        "purl": "pkg:github/google/uuid@0f11ee6918f41a04c201eceeadf612a377bc7fbc"
+      },
+      {
+        "type": "library",
+        "name": "yaml.v2",
+        "version": "7649d4548cb53a614db133b2a8ac1f31859dda8c",
+        "bom-ref": "git+gopkg.in/yaml.v2$7649d4548cb53a614db133b2a8ac1f31859dda8c",
+        "purl": "pkg:googlesource/rivo/haml.v2@7649d4548cb53a614db133b2a8ac1f31859dda8c"
+      },
+      {
+        "type": "library",
+        "name": "zap",
+        "version": "fcf8ee58669e358bbd6460bef5c2ee7a53c0803a",
+        "bom-ref": "pkg:github/uber-go/zap@fcf8ee58669e358bbd6460bef5c2ee7a53c0803a",
+        "purl": "pkg:github/uber-go/zap@fcf8ee58669e358bbd6460bef5c2ee7a53c0803a"
+      },
+      {
+        "type": "library",
+        "name": "circl",
+        "version": "75b28edc25ec569e6353a2b944b0b83d48a9c2e8",
+        "bom-ref": "pkg:github/cloudflare/circl@75b28edc25ec569e6353a2b944b0b83d48a9c2e8",
+        "purl": "pkg:github/cloudflare/circl@75b28edc25ec569e6353a2b944b0b83d48a9c2e8"
+      },
+      {
+        "type": "library",
+        "name": "crypto",
+        "version": "332fd656f4f013f66e643818fe8c759538456535",
+        "bom-ref": "git+go.googlesource.com/crypto$332fd656f4f013f66e643818fe8c759538456535",
+        "purl": "pkg:googlesource/rivo/crypto@332fd656f4f013f66e643818fe8c759538456535"
+      },
+      {
+        "type": "library",
+        "name": "github.com/google/go-querystring",
+        "version": "v1.1.0",
+        "bom-ref": "pkg:golang/github.com/google/go-querystring@v1.1.0",
+        "purl": "pkg:golang/github.com/google/go-querystring@v1.1.0"
+      },
+      {
+        "type": "library",
+        "name": "go-crypto",
+        "version": "afb1ddc0824ce0052d72ac0d6917f144a1207424",
+        "bom-ref": "pkg:github/ProtonMail/go-crypto@afb1ddc0824ce0052d72ac0d6917f144a1207424",
+        "purl": "pkg:github/ProtonMail/go-crypto@afb1ddc0824ce0052d72ac0d6917f144a1207424"
+      },
+      {
+        "type": "library",
+        "name": "go-figure",
+        "version": "734e95fb86be9194fff173d46130cf717d719dd1",
+        "bom-ref": "pkg:github/common-nighthawk/go-figure@734e95fb86be9194fff173d46130cf717d719dd1",
+        "purl": "pkg:github/common-nighthawk/go-figure@734e95fb86be9194fff173d46130cf717d719dd1"
+      },
+      {
+        "type": "library",
+        "name": "gordf",
+        "version": "b735bd5aac89fe25cad4ef488a95bc00ea549edd",
+        "bom-ref": "pkg:github/spdx/gordf@b735bd5aac89fe25cad4ef488a95bc00ea549edd",
+        "purl": "pkg:github/spdx/gordf@b735bd5aac89fe25cad4ef488a95bc00ea549edd"
+      },
+      {
+        "type": "library",
+        "name": "go-runewidth",
+        "version": "44b7c5b4d67df8ca22917b6800c158a6d3be3560",
+        "bom-ref": "pkg:github/mattn/go-runewidth@44b7c5b4d67df8ca22917b6800c158a6d3be3560",
+        "purl": "pkg:github/mattn/go-runewidth@44b7c5b4d67df8ca22917b6800c158a6d3be3560"
+      },
+      {
+        "type": "library",
+        "name": "go-struct-converter",
+        "version": "c72ef8859ca9d1e1b86b1251a7da8b1ad6e7d8be",
+        "bom-ref": "pkg:github/anchore/go-struct-converter@c72ef8859ca9d1e1b86b1251a7da8b1ad6e7d8be",
+        "purl": "pkg:github/anchore/go-struct-converter@c72ef8859ca9d1e1b86b1251a7da8b1ad6e7d8be"
+      },
+      {
+        "type": "library",
+        "name": "multierr",
+        "version": "de75ae527b39a27afcb50a84427ec7b84021d5f4",
+        "bom-ref": "pkg:github/uber-go/multierr@de75ae527b39a27afcb50a84427ec7b84021d5f4",
+        "purl": "pkg:github/uber-go/multierr@de75ae527b39a27afcb50a84427ec7b84021d5f4"
+      },
+      {
+        "type": "library",
+        "name": "oauth2",
+        "version": "5fd42413edb3b1699004a31b72e485e0e4ba1b13",
+        "bom-ref": "git+go.googlesource.com/oauth2$5fd42413edb3b1699004a31b72e485e0e4ba1b13",
+        "purl": "pkg:googlesource/rivo/oauth2@5fd42413edb3b1699004a31b72e485e0e4ba1b13"
+      },
+      {
+        "type": "library",
+        "name": "pflag",
+        "version": "2e9d26c8c37aae03e3f9d4e90b7116f5accb7cab",
+        "bom-ref": "pkg:github/spf13/pflag@2e9d26c8c37aae03e3f9d4e90b7116f5accb7cab",
+        "description": "Drop-in replacement for Go's flag package, implementing POSIX/GNU-style --flags."
+      },
+      {
+        "type": "library",
+        "name": "sys",
+        "version": "673e0f94c16da4b6d7f550d6af66fde0c69503e4",
+        "bom-ref": "git+go.googlesource.com/sys$673e0f94c16da4b6d7f550d6af66fde0c69503e4",
+        "purl": "pkg:googlesource/rivo/sys@673e0f94c16da4b6d7f550d6af66fde0c69503e4"
+      },
+      {
+        "type": "library",
+        "name": "text",
+        "version": "9c2f3a21352d1ff4e47776534e3f334b39ec0183",
+        "bom-ref": "git+go.googlesource.com/text$9c2f3a21352d1ff4e47776534e3f334b39ec0183",
+        "purl": "pkg:googlesource/rivo/text@9c2f3a21352d1ff4e47776534e3f334b39ec0183"
+      },
+      {
+        "type": "library",
+        "name": "uniseg",
+        "version": "03509a98a092b522b2ff0de13e53513d18b3b837",
+        "bom-ref": "pkg:github/rivo/uniseg@03509a98a092b522b2ff0de13e53513d18b3b837",
+        "description": "Unicode Text Segmentation, Word Wrapping, and String Width Calculation in Go",
+        "purl": "pkg:github/rivo/uniseg@03509a98a092b522b2ff0de13e53513d18b3b837"
+      },
+      {
+        "type": "library",
+        "name": "yaml",
+        "version": "c3772b51db126345efe2dfe4ff8dac83b8141684",
+        "bom-ref": "pkg:github/kubernetes-sigs/yaml@c3772b51db126345efe2dfe4ff8dac83b8141684",
+        "description": "A better way to marshal and unmarshal YAML in Golang",
+        "purl": "pkg:github/kubernetes-sigs/yaml@c3772b51db126345efe2dfe4ff8dac83b8141684"
+      }
+    ],
+    "dependencies": [
+      {
+        "ref": "github.com:viveksahu26/sbomqs.git$14e7376fa2b00c102a9ba89fd5ccc7cf26f2f255",
+        "dependsOn": [
+          "pkg:github/DependencyTrack/client-go@2570042a517e97bc9ec0c617706a89a0edad4426",
+          "pkg:github/spf13/cobra@e94f6d0dd9a5e5738dca6bce03c4b1207ffbc0ec",
+          "pkg:github/CycloneDX/cyclonedx-go@98a070df0171240c53e7e1c3c46640eb9b257e08",
+          "pkg:github/google/go-github@0a6474043f9f14c77ba6fa77d1b377a7538a4c8c",
+          "pkg:github/github/go-spdx@eacf4f37582f0c1b8f0086816ad1afea74d1ac3f",
+          "pkg:github/samber/lo@151a075ecca084ddbb519fafd513002df0632716",
+          "pkg:github/package-url/packageurl-go@7cb81af9593b9512bb946c55c85609948c48aab9",
+          "pkg:github/kubernetes-sigs/release-utils@24b0b7a327387393fa4933add6b2c9f5718cade0",
+          "pkg:github/Masterminds/semver@e06051f8fcc4c8b4a4990c337b9862a2448722e5",
+          "pkg:github/olekukonko/tablewriter@c7d2a8a09b076b70918308a3cd95464b2ae3b5d8",
+          "pkg:github/spdx/tools-golang@9db247b854b9634d0109153d515fd1a9efd5a1b1",
+          "pkg:github/google/uuid@0f11ee6918f41a04c201eceeadf612a377bc7fbc",
+          "git+gopkg.in/yaml.v2$7649d4548cb53a614db133b2a8ac1f31859dda8c",
+          "pkg:github/uber-go/zap@fcf8ee58669e358bbd6460bef5c2ee7a53c0803a"
+        ]
+      },
+      {
+        "ref": "pkg:github/DependencyTrack/client-go@2570042a517e97bc9ec0c617706a89a0edad4426",
+        "dependsOn": [
+          "pkg:github/google/uuid@0f11ee6918f41a04c201eceeadf612a377bc7fbc"
+        ]
+      },
+      {
+        "ref": "pkg:github/spf13/cobra@e94f6d0dd9a5e5738dca6bce03c4b1207ffbc0ec",
+        "dependsOn": [
+          "pkg:github/spf13/pflag@2e9d26c8c37aae03e3f9d4e90b7116f5accb7cab"
+        ]
+      },
+      {
+        "ref": "pkg:github/CycloneDX/cyclonedx-go@98a070df0171240c53e7e1c3c46640eb9b257e08"
+      },
+      {
+        "ref": "pkg:github/google/go-github@0a6474043f9f14c77ba6fa77d1b377a7538a4c8c",
+        "dependsOn": [
+          "pkg:github/ProtonMail/go-crypto@afb1ddc0824ce0052d72ac0d6917f144a1207424",
+          "pkg:golang/github.com/google/go-querystring@v1.1.0",
+          "git+go.googlesource.com/oauth2$5fd42413edb3b1699004a31b72e485e0e4ba1b13"
+        ]
+      },
+      {
+        "ref": "pkg:github/github/go-spdx@eacf4f37582f0c1b8f0086816ad1afea74d1ac3f"
+      },
+      {
+        "ref": "pkg:github/samber/lo@151a075ecca084ddbb519fafd513002df0632716",
+        "dependsOn": [
+          "git+go.googlesource.com/text$9c2f3a21352d1ff4e47776534e3f334b39ec0183"
+        ]
+      },
+      {
+        "ref": "pkg:github/package-url/packageurl-go@7cb81af9593b9512bb946c55c85609948c48aab9"
+      },
+      {
+        "ref": "pkg:github/kubernetes-sigs/release-utils@24b0b7a327387393fa4933add6b2c9f5718cade0",
+        "dependsOn": [
+          "pkg:github/spf13/cobra@e94f6d0dd9a5e5738dca6bce03c4b1207ffbc0ec",
+          "pkg:github/common-nighthawk/go-figure@734e95fb86be9194fff173d46130cf717d719dd1"
+        ]
+      },
+      {
+        "ref": "pkg:github/Masterminds/semver@e06051f8fcc4c8b4a4990c337b9862a2448722e5"
+      },
+      {
+        "ref": "pkg:github/olekukonko/tablewriter@c7d2a8a09b076b70918308a3cd95464b2ae3b5d8",
+        "dependsOn": [
+          "pkg:github/mattn/go-runewidth@44b7c5b4d67df8ca22917b6800c158a6d3be3560"
+        ]
+      },
+      {
+        "ref": "pkg:github/spdx/tools-golang@9db247b854b9634d0109153d515fd1a9efd5a1b1",
+        "dependsOn": [
+          "pkg:github/spdx/gordf@b735bd5aac89fe25cad4ef488a95bc00ea549edd",
+          "pkg:github/anchore/go-struct-converter@c72ef8859ca9d1e1b86b1251a7da8b1ad6e7d8be",
+          "pkg:github/kubernetes-sigs/yaml@c3772b51db126345efe2dfe4ff8dac83b8141684"
+        ]
+      },
+      {
+        "ref": "pkg:github/google/uuid@0f11ee6918f41a04c201eceeadf612a377bc7fbc"
+      },
+      {
+        "ref": "git+gopkg.in/yaml.v2$7649d4548cb53a614db133b2a8ac1f31859dda8c"
+      },
+      {
+        "ref": "pkg:github/uber-go/zap@fcf8ee58669e358bbd6460bef5c2ee7a53c0803a",
+        "dependsOn": [
+          "pkg:github/uber-go/multierr@de75ae527b39a27afcb50a84427ec7b84021d5f4"
+        ]
+      },
+      {
+        "ref": "pkg:github/cloudflare/circl@75b28edc25ec569e6353a2b944b0b83d48a9c2e8",
+        "dependsOn": [
+          "git+go.googlesource.com/sys$673e0f94c16da4b6d7f550d6af66fde0c69503e4"
+        ]
+      },
+      {
+        "ref": "git+go.googlesource.com/crypto$332fd656f4f013f66e643818fe8c759538456535",
+        "dependsOn": [
+          "git+go.googlesource.com/sys$673e0f94c16da4b6d7f550d6af66fde0c69503e4"
+        ]
+      },
+      {
+        "ref": "pkg:golang/github.com/google/go-querystring@v1.1.0"
+      },
+      {
+        "ref": "pkg:github/ProtonMail/go-crypto@afb1ddc0824ce0052d72ac0d6917f144a1207424",
+        "dependsOn": [
+          "pkg:github/cloudflare/circl@75b28edc25ec569e6353a2b944b0b83d48a9c2e8",
+          "git+go.googlesource.com/crypto$332fd656f4f013f66e643818fe8c759538456535"
+        ]
+      },
+      {
+        "ref": "pkg:github/common-nighthawk/go-figure@734e95fb86be9194fff173d46130cf717d719dd1"
+      },
+      {
+        "ref": "pkg:github/spdx/gordf@b735bd5aac89fe25cad4ef488a95bc00ea549edd"
+      },
+      {
+        "ref": "pkg:github/mattn/go-runewidth@44b7c5b4d67df8ca22917b6800c158a6d3be3560",
+        "dependsOn": [
+          "pkg:github/rivo/uniseg@03509a98a092b522b2ff0de13e53513d18b3b837"
+        ]
+      },
+      {
+        "ref": "pkg:github/anchore/go-struct-converter@c72ef8859ca9d1e1b86b1251a7da8b1ad6e7d8be"
+      },
+      {
+        "ref": "pkg:github/uber-go/multierr@de75ae527b39a27afcb50a84427ec7b84021d5f4"
+      },
+      {
+        "ref": "git+go.googlesource.com/oauth2$5fd42413edb3b1699004a31b72e485e0e4ba1b13"
+      },
+      {
+        "ref": "pkg:github/spf13/pflag@2e9d26c8c37aae03e3f9d4e90b7116f5accb7cab"
+      },
+      {
+        "ref": "git+go.googlesource.com/sys$673e0f94c16da4b6d7f550d6af66fde0c69503e4"
+      },
+      {
+        "ref": "git+go.googlesource.com/text$9c2f3a21352d1ff4e47776534e3f334b39ec0183"
+      },
+      {
+        "ref": "pkg:github/rivo/uniseg@03509a98a092b522b2ff0de13e53513d18b3b837"
+      },
+      {
+        "ref": "pkg:github/kubernetes-sigs/yaml@c3772b51db126345efe2dfe4ff8dac83b8141684"
+      }
+    ]
+  }
+  

@@ -1,0 +1,204 @@
+{
+    "$schema": "http://cyclonedx.org/schema/bom-1.5.schema.json",
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.5",
+    "serialNumber": "urn:uuid:ad7a1dab-9f96-463f-8964-4a65adbe8f18",
+    "version": 1,
+    "metadata": {
+      "timestamp": "2024-10-05T10:59:25+05:30",
+      "tools": [
+        {
+          "vendor": "CycloneDX",
+          "name": "cyclonedx-gomod",
+          "version": "v1.7.0"
+        }
+      ],
+      "component": {
+        "bom-ref": "pkg:golang/github.com/viveksahu26/stree@v0.0.0-20240928150206-e7e6ef0ee4d7?type=module",
+        "type": "application",
+        "name": "github.com/viveksahu26/stree",
+        "version": "v0.0.0-20240928150206-e7e6ef0ee4d7",
+        "purl": "pkg:golang/github.com/viveksahu26/stree@v0.0.0-20240928150206-e7e6ef0ee4d7?type=module\u0026goos=linux\u0026goarch=amd64"
+        
+      }
+    },
+    "components": [
+      {
+        "bom-ref": "pkg:golang/github.com/gdamore/encoding@v1.0.0?type=module",
+        "type": "library",
+        "name": "github.com/gdamore/encoding",
+        "version": "v1.0.0",
+        "scope": "required",
+        "purl": "pkg:golang/github.com/gdamore/encoding@v1.0.0?type=module\u0026goos=linux\u0026goarch=amd64"
+      },
+      {
+        "bom-ref": "pkg:golang/github.com/gdamore/tcell/v2@v2.7.1?type=module",
+        "type": "library",
+        "name": "github.com/gdamore/tcell/v2",
+        "version": "v2.7.1",
+        "scope": "required",
+        "purl": "pkg:golang/github.com/gdamore/tcell/v2@v2.7.1?type=module\u0026goos=linux\u0026goarch=amd64"
+      },
+      {
+        "bom-ref": "pkg:golang/github.com/inconshreveable/mousetrap@v1.1.0?type=module",
+        "type": "library",
+        "name": "github.com/inconshreveable/mousetrap",
+        "version": "v1.1.0",
+        "scope": "required",
+        "purl": "pkg:golang/github.com/inconshreveable/mousetrap@v1.1.0?type=module\u0026goos=linux\u0026goarch=amd64"
+      },
+      {
+        "bom-ref": "pkg:golang/github.com/lucasb-eyer/go-colorful@v1.2.0?type=module",
+        "type": "library",
+        "name": "github.com/lucasb-eyer/go-colorful",
+        "version": "v1.2.0",
+        "scope": "required",
+        "purl": "pkg:golang/github.com/lucasb-eyer/go-colorful@v1.2.0?type=module\u0026goos=linux\u0026goarch=amd64"
+      },
+      {
+        "bom-ref": "pkg:golang/github.com/mattn/go-runewidth@v0.0.15?type=module",
+        "type": "library",
+        "name": "github.com/mattn/go-runewidth",
+        "version": "v0.0.15",
+        "scope": "required",
+        "purl": "pkg:golang/github.com/mattn/go-runewidth@v0.0.15?type=module\u0026goos=linux\u0026goarch=amd64"
+      },
+      {
+        "bom-ref": "pkg:golang/github.com/rivo/tview@v0.0.0-20240921122403-a64fc48d7654?type=module",
+        "type": "library",
+        "name": "github.com/rivo/tview",
+        "version": "v0.0.0-20240921122403-a64fc48d7654",
+        "scope": "required",
+        "purl": "pkg:golang/github.com/rivo/tview@v0.0.0-20240921122403-a64fc48d7654?type=module\u0026goos=linux\u0026goarch=amd64"
+      },
+      {
+        "bom-ref": "pkg:golang/github.com/rivo/uniseg@v0.4.7?type=module",
+        "type": "library",
+        "name": "github.com/rivo/uniseg",
+        "version": "v0.4.7",
+        "scope": "required",
+        "purl": "pkg:golang/github.com/rivo/uniseg@v0.4.7?type=module\u0026goos=linux\u0026goarch=amd64"
+      },
+      {
+        "bom-ref": "pkg:golang/github.com/spf13/cobra@v1.8.1?type=module",
+        "type": "library",
+        "name": "github.com/spf13/cobra",
+        "version": "v1.8.1",
+        "scope": "required",
+        "purl": "pkg:golang/github.com/spf13/cobra@v1.8.1?type=module\u0026goos=linux\u0026goarch=amd64"
+      },
+      {
+        "bom-ref": "pkg:golang/github.com/spf13/pflag@v1.0.5?type=module",
+        "type": "library",
+        "name": "github.com/spf13/pflag",
+        "version": "v1.0.5",
+        "scope": "required",
+        "purl": "pkg:golang/github.com/spf13/pflag@v1.0.5?type=module\u0026goos=linux\u0026goarch=amd64"
+      },
+      {
+        "bom-ref": "pkg:golang/golang.org/x/sys@v0.17.0?type=module",
+        "type": "library",
+        "name": "golang.org/x/sys",
+        "version": "v0.17.0",
+        "scope": "required",
+        "purl": "pkg:golang/golang.org/x/sys@v0.17.0?type=module\u0026goos=linux\u0026goarch=amd64"
+      },
+      {
+        "bom-ref": "pkg:golang/golang.org/x/term@v0.17.0?type=module",
+        "type": "library",
+        "name": "golang.org/x/term",
+        "version": "v0.17.0",
+        "scope": "required",
+        "purl": "pkg:golang/golang.org/x/term@v0.17.0?type=module\u0026goos=linux\u0026goarch=amd64"
+      },
+      {
+        "bom-ref": "pkg:golang/golang.org/x/text@v0.14.0?type=module",
+        "type": "library",
+        "name": "golang.org/x/text",
+        "version": "v0.14.0",
+        "scope": "required",
+        "purl": "pkg:golang/golang.org/x/text@v0.14.0?type=module\u0026goos=linux\u0026goarch=amd64"
+      }
+    ],
+    "dependencies": [
+      {
+        "ref": "pkg:golang/github.com/viveksahu26/stree@v0.0.0-20240928150206-e7e6ef0ee4d7?type=module",
+        "dependsOn": [
+          "pkg:golang/github.com/rivo/tview@v0.0.0-20240921122403-a64fc48d7654?type=module",
+          "pkg:golang/github.com/spf13/cobra@v1.8.1?type=module"
+        ]
+      },
+      {
+        "ref": "pkg:golang/github.com/gdamore/encoding@v1.0.0?type=module",
+        "dependsOn": [
+          "pkg:golang/golang.org/x/text@v0.14.0?type=module"
+        ]
+      },
+      {
+        "ref": "pkg:golang/github.com/gdamore/tcell/v2@v2.7.1?type=module",
+        "dependsOn": [
+          "pkg:golang/github.com/gdamore/encoding@v1.0.0?type=module",
+          "pkg:golang/github.com/lucasb-eyer/go-colorful@v1.2.0?type=module",
+          "pkg:golang/github.com/mattn/go-runewidth@v0.0.15?type=module",
+          "pkg:golang/github.com/rivo/uniseg@v0.4.7?type=module",
+          "pkg:golang/golang.org/x/sys@v0.17.0?type=module",
+          "pkg:golang/golang.org/x/term@v0.17.0?type=module",
+          "pkg:golang/golang.org/x/text@v0.14.0?type=module"
+        ]
+      },
+      {
+        "ref": "pkg:golang/github.com/inconshreveable/mousetrap@v1.1.0?type=module"
+      },
+      {
+        "ref": "pkg:golang/github.com/lucasb-eyer/go-colorful@v1.2.0?type=module"
+      },
+      {
+        "ref": "pkg:golang/github.com/mattn/go-runewidth@v0.0.15?type=module",
+        "dependsOn": [
+          "pkg:golang/github.com/rivo/uniseg@v0.4.7?type=module"
+        ]
+      },
+      {
+        "ref": "pkg:golang/github.com/rivo/tview@v0.0.0-20240921122403-a64fc48d7654?type=module",
+        "dependsOn": [
+          "pkg:golang/github.com/gdamore/encoding@v1.0.0?type=module",
+          "pkg:golang/github.com/gdamore/tcell/v2@v2.7.1?type=module",
+          "pkg:golang/github.com/lucasb-eyer/go-colorful@v1.2.0?type=module",
+          "pkg:golang/github.com/mattn/go-runewidth@v0.0.15?type=module",
+          "pkg:golang/github.com/rivo/uniseg@v0.4.7?type=module",
+          "pkg:golang/golang.org/x/sys@v0.17.0?type=module",
+          "pkg:golang/golang.org/x/term@v0.17.0?type=module",
+          "pkg:golang/golang.org/x/text@v0.14.0?type=module"
+        ]
+      },
+      {
+        "ref": "pkg:golang/github.com/rivo/uniseg@v0.4.7?type=module"
+      },
+      {
+        "ref": "pkg:golang/github.com/spf13/cobra@v1.8.1?type=module",
+        "dependsOn": [
+          "pkg:golang/github.com/inconshreveable/mousetrap@v1.1.0?type=module",
+          "pkg:golang/github.com/spf13/pflag@v1.0.5?type=module"
+        ]
+      },
+      {
+        "ref": "pkg:golang/github.com/spf13/pflag@v1.0.5?type=module"
+      },
+      {
+        "ref": "pkg:golang/golang.org/x/sys@v0.17.0?type=module"
+      },
+      {
+        "ref": "pkg:golang/golang.org/x/term@v0.17.0?type=module",
+        "dependsOn": [
+          "pkg:golang/golang.org/x/sys@v0.17.0?type=module"
+        ]
+      },
+      {
+        "ref": "pkg:golang/golang.org/x/text@v0.14.0?type=module",
+        "dependsOn": [
+          "pkg:golang/golang.org/x/sys@v0.17.0?type=module"
+        ]
+      }
+    ]
+  }
+  
