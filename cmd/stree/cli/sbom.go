@@ -17,16 +17,11 @@ func Sbom() *cobra.Command {
 		SilenceUsage: true,
 		Example: `stree sbom [--dependencies direct|indirect] <sbom file>
 
-# create a directory tree or file tree structure for the provided sbom
-  stree sbom sbom.spdx.json
+# see dependencies in a directory tree or file tree structure for the provided sbom
+  stree sbom samples/sbomqs-fossa-cyclonedx.json
 		
-# create a directory tree or file tree structure for the provided sbom and output into provided file
-  stree sbom --dependencies indirect example-sbom.json
-		
-# create a tree directory like structure for the provided SBOM with only primary dependencies
+# see only primary dependencies in a directory tree or file tree structure for the provided SBOM
   stree sbom --primary example-sbom.json
-
-		
 		`,
 		Args: cobra.MinimumNArgs(1),
 		RunE: func(_ *cobra.Command, args []string) error {
