@@ -1,0 +1,241 @@
+SPDXVersion: SPDX-2.2
+DataLicense: CC0-1.0
+SPDXID: SPDXRef-DOCUMENT
+DocumentName: github.com/viveksahu26/stree
+DocumentNamespace: http://spdx.org/spdxpackages/github.com/viveksahu26/stree-beb705d2-04d3-41ae-96b0-f0def21a8fdc
+Creator: Tool: spdx-sbom-generator-v0.0.10
+Created: 2024-11-22T16:20:59Z
+
+##### Package representing the github.com/viveksahu26/stree
+
+PackageName: github.com/viveksahu26/stree
+SPDXID: SPDXRef-Package-github.com.viveksahu26.stree
+PackageVersion: 3eb800a
+PackageSupplier: Organization: github.com/viveksahu26/stree
+PackageDownloadLocation: git+https://github.com/viveksahu26/stree.git
+FilesAnalyzed: false
+PackageChecksum: SHA256: 4c652de82046224c363ef65a157febf2680ae2b48bb612998bc1d9f23e9590f9
+PackageHomePage: https://github.com/viveksahu26/stree
+PackageLicenseConcluded: NOASSERTION
+PackageLicenseDeclared: NOASSERTION
+PackageCopyrightText: NOASSERTION
+PackageLicenseComments: NOASSERTION
+PackageComment: NOASSERTION
+
+Relationship: SPDXRef-DOCUMENT DESCRIBES SPDXRef-Package-github.com.viveksahu26.stree 
+
+Relationship: SPDXRef-Package-github.com.viveksahu26.stree DEPENDS_ON SPDXRef-Package-github.com.gdamore.encoding-v1.0.0 
+Relationship: SPDXRef-Package-github.com.viveksahu26.stree DEPENDS_ON SPDXRef-Package-github.com.mattn.go-runewidth-v0.0.15 
+Relationship: SPDXRef-Package-github.com.viveksahu26.stree DEPENDS_ON SPDXRef-Package-github.com.rivo.uniseg-v0.4.7 
+Relationship: SPDXRef-Package-github.com.viveksahu26.stree DEPENDS_ON SPDXRef-Package-github.com.spf13.cobra-v1.8.1 
+Relationship: SPDXRef-Package-github.com.viveksahu26.stree DEPENDS_ON SPDXRef-Package-golang.org.x.term-v0.17.0 
+Relationship: SPDXRef-Package-github.com.viveksahu26.stree DEPENDS_ON SPDXRef-Package-golang.org.x.text-v0.14.0 
+Relationship: SPDXRef-Package-github.com.viveksahu26.stree DEPENDS_ON SPDXRef-Package-github.com.gdamore.tcell.v2-v2.7.1 
+Relationship: SPDXRef-Package-github.com.viveksahu26.stree DEPENDS_ON SPDXRef-Package-github.com.lucasb-eyer.go-colorful-v1.2.0 
+Relationship: SPDXRef-Package-github.com.viveksahu26.stree DEPENDS_ON SPDXRef-Package-github.com.rivo.tview-v0.0.0-20240921122403-a64fc48d7654 
+Relationship: SPDXRef-Package-github.com.viveksahu26.stree DEPENDS_ON SPDXRef-Package-github.com.spf13.pflag-v1.0.5 
+Relationship: SPDXRef-Package-github.com.viveksahu26.stree DEPENDS_ON SPDXRef-Package-golang.org.x.sys-v0.17.0 
+
+##### Package representing the github.com/spf13/pflag
+
+PackageName: github.com/spf13/pflag
+SPDXID: SPDXRef-Package-github.com.spf13.pflag-v1.0.5
+PackageVersion: v1.0.5
+PackageSupplier: Organization: github.com/spf13/pflag
+PackageDownloadLocation: https://github.com/spf13/pflag/releases/tag/v1.0.5
+FilesAnalyzed: false
+PackageChecksum: SHA256: db8e07f706a9790e22cc14adc9bdb4a01da656c31836bf03128136c06a1cd3cc
+PackageHomePage: https://github.com/spf13/pflag
+PackageLicenseConcluded: NOASSERTION
+PackageLicenseDeclared: NOASSERTION
+PackageCopyrightText: NOASSERTION
+PackageLicenseComments: NOASSERTION
+PackageComment: NOASSERTION
+
+##### Package representing the github.com/spf13/cobra
+
+PackageName: github.com/spf13/cobra
+SPDXID: SPDXRef-Package-github.com.spf13.cobra-v1.8.1
+PackageVersion: v1.8.1
+PackageSupplier: Organization: github.com/spf13/cobra
+PackageDownloadLocation: https://github.com/spf13/cobra/releases/tag/v1.8.1
+FilesAnalyzed: false
+PackageChecksum: SHA256: 775b44772e0243d41547a3ebcadffd35bcaf912b2e6281fe69ea5391729dbc5e
+PackageHomePage: https://github.com/spf13/cobra
+PackageLicenseConcluded: NOASSERTION
+PackageLicenseDeclared: NOASSERTION
+PackageCopyrightText: NOASSERTION
+PackageLicenseComments: NOASSERTION
+PackageComment: NOASSERTION
+
+Relationship: SPDXRef-Package-github.com.spf13.cobra-v1.8.1 DEPENDS_ON SPDXRef-Package-github.com.spf13.pflag-v1.0.5 
+
+##### Package representing the golang.org/x/text
+
+PackageName: golang.org/x/text
+SPDXID: SPDXRef-Package-golang.org.x.text-v0.14.0
+PackageVersion: v0.14.0
+PackageSupplier: Organization: golang.org/x/text
+PackageDownloadLocation: https://golang.org/x/text
+FilesAnalyzed: false
+PackageChecksum: SHA256: c2ac2b46b7845301c6f4ba9aff3c0e7707fd18b2e6def9a8b78d708dd3bb0850
+PackageHomePage: https://golang.org/x/text
+PackageLicenseConcluded: NOASSERTION
+PackageLicenseDeclared: NOASSERTION
+PackageCopyrightText: NOASSERTION
+PackageLicenseComments: NOASSERTION
+PackageComment: NOASSERTION
+
+Relationship: SPDXRef-Package-golang.org.x.text-v0.14.0 DEPENDS_ON SPDXRef-Package-golang.org.x.sys-v0.17.0 
+
+##### Package representing the github.com/gdamore/encoding
+
+PackageName: github.com/gdamore/encoding
+SPDXID: SPDXRef-Package-github.com.gdamore.encoding-v1.0.0
+PackageVersion: v1.0.0
+PackageSupplier: Organization: github.com/gdamore/encoding
+PackageDownloadLocation: https://github.com/gdamore/encoding/releases/tag/v1.0.0
+FilesAnalyzed: false
+PackageChecksum: SHA256: f3024fcd297ed3071133f272df59609a872c690ec27e56774264bdb87bd7e586
+PackageHomePage: https://github.com/gdamore/encoding
+PackageLicenseConcluded: NOASSERTION
+PackageLicenseDeclared: NOASSERTION
+PackageCopyrightText: NOASSERTION
+PackageLicenseComments: NOASSERTION
+PackageComment: NOASSERTION
+
+Relationship: SPDXRef-Package-github.com.gdamore.encoding-v1.0.0 DEPENDS_ON SPDXRef-Package-golang.org.x.text-v0.14.0 
+
+##### Package representing the github.com/gdamore/tcell/v2
+
+PackageName: github.com/gdamore/tcell/v2
+SPDXID: SPDXRef-Package-github.com.gdamore.tcell.v2-v2.7.1
+PackageVersion: v2.7.1
+PackageSupplier: Organization: github.com/gdamore/tcell/v2
+PackageDownloadLocation: https://github.com/gdamore/tcell/v2/releases/tag/v2.7.1
+FilesAnalyzed: false
+PackageChecksum: SHA256: 9564b9cec13800995a60d11c6bd4d34449230df2c7130a19cfba3ec111f76ea9
+PackageHomePage: https://github.com/gdamore/tcell/v2
+PackageLicenseConcluded: NOASSERTION
+PackageLicenseDeclared: NOASSERTION
+PackageCopyrightText: NOASSERTION
+PackageLicenseComments: NOASSERTION
+PackageComment: NOASSERTION
+
+Relationship: SPDXRef-Package-github.com.gdamore.tcell.v2-v2.7.1 DEPENDS_ON SPDXRef-Package-github.com.rivo.uniseg-v0.4.7 
+Relationship: SPDXRef-Package-github.com.gdamore.tcell.v2-v2.7.1 DEPENDS_ON SPDXRef-Package-golang.org.x.sys-v0.17.0 
+Relationship: SPDXRef-Package-github.com.gdamore.tcell.v2-v2.7.1 DEPENDS_ON SPDXRef-Package-golang.org.x.term-v0.17.0 
+Relationship: SPDXRef-Package-github.com.gdamore.tcell.v2-v2.7.1 DEPENDS_ON SPDXRef-Package-golang.org.x.text-v0.14.0 
+Relationship: SPDXRef-Package-github.com.gdamore.tcell.v2-v2.7.1 DEPENDS_ON SPDXRef-Package-github.com.gdamore.encoding-v1.0.0 
+Relationship: SPDXRef-Package-github.com.gdamore.tcell.v2-v2.7.1 DEPENDS_ON SPDXRef-Package-github.com.lucasb-eyer.go-colorful-v1.2.0 
+Relationship: SPDXRef-Package-github.com.gdamore.tcell.v2-v2.7.1 DEPENDS_ON SPDXRef-Package-github.com.mattn.go-runewidth-v0.0.15 
+
+##### Package representing the github.com/lucasb-eyer/go-colorful
+
+PackageName: github.com/lucasb-eyer/go-colorful
+SPDXID: SPDXRef-Package-github.com.lucasb-eyer.go-colorful-v1.2.0
+PackageVersion: v1.2.0
+PackageSupplier: Organization: github.com/lucasb-eyer/go-colorful
+PackageDownloadLocation: https://github.com/lucasb-eyer/go-colorful/releases/tag/v1.2.0
+FilesAnalyzed: false
+PackageChecksum: SHA256: f7ea778a81127b17f11d99d59fb33376fe5fad13d9fa47e2d0de399f10e5baae
+PackageHomePage: https://github.com/lucasb-eyer/go-colorful
+PackageLicenseConcluded: NOASSERTION
+PackageLicenseDeclared: NOASSERTION
+PackageCopyrightText: NOASSERTION
+PackageLicenseComments: NOASSERTION
+PackageComment: NOASSERTION
+
+##### Package representing the github.com/rivo/uniseg
+
+PackageName: github.com/rivo/uniseg
+SPDXID: SPDXRef-Package-github.com.rivo.uniseg-v0.4.7
+PackageVersion: v0.4.7
+PackageSupplier: Organization: github.com/rivo/uniseg
+PackageDownloadLocation: https://github.com/rivo/uniseg/releases/tag/v0.4.7
+FilesAnalyzed: false
+PackageChecksum: SHA256: 21d0b63727c040eaceb2c6ed3427b220d8b2686ea100cbe242a99044b3a3115e
+PackageHomePage: https://github.com/rivo/uniseg
+PackageLicenseConcluded: NOASSERTION
+PackageLicenseDeclared: NOASSERTION
+PackageCopyrightText: NOASSERTION
+PackageLicenseComments: NOASSERTION
+PackageComment: NOASSERTION
+
+##### Package representing the github.com/mattn/go-runewidth
+
+PackageName: github.com/mattn/go-runewidth
+SPDXID: SPDXRef-Package-github.com.mattn.go-runewidth-v0.0.15
+PackageVersion: v0.0.15
+PackageSupplier: Organization: github.com/mattn/go-runewidth
+PackageDownloadLocation: https://github.com/mattn/go-runewidth/releases/tag/v0.0.15
+FilesAnalyzed: false
+PackageChecksum: SHA256: 5dcafaad1c1bb098781e768d94ce0cc1eb76ce74545d190a1bebd5e42ebba287
+PackageHomePage: https://github.com/mattn/go-runewidth
+PackageLicenseConcluded: NOASSERTION
+PackageLicenseDeclared: NOASSERTION
+PackageCopyrightText: NOASSERTION
+PackageLicenseComments: NOASSERTION
+PackageComment: NOASSERTION
+
+Relationship: SPDXRef-Package-github.com.mattn.go-runewidth-v0.0.15 DEPENDS_ON SPDXRef-Package-github.com.rivo.uniseg-v0.4.7 
+
+##### Package representing the golang.org/x/sys
+
+PackageName: golang.org/x/sys
+SPDXID: SPDXRef-Package-golang.org.x.sys-v0.17.0
+PackageVersion: v0.17.0
+PackageSupplier: Organization: golang.org/x/sys
+PackageDownloadLocation: https://golang.org/x/sys
+FilesAnalyzed: false
+PackageChecksum: SHA256: bbdc61d63609a4cba9f89fb0b5ff0831257a2cafa0af17806c8bc7e4f2a3c813
+PackageHomePage: https://golang.org/x/sys
+PackageLicenseConcluded: NOASSERTION
+PackageLicenseDeclared: NOASSERTION
+PackageCopyrightText: NOASSERTION
+PackageLicenseComments: NOASSERTION
+PackageComment: NOASSERTION
+
+##### Package representing the golang.org/x/term
+
+PackageName: golang.org/x/term
+SPDXID: SPDXRef-Package-golang.org.x.term-v0.17.0
+PackageVersion: v0.17.0
+PackageSupplier: Organization: golang.org/x/term
+PackageDownloadLocation: https://golang.org/x/term
+FilesAnalyzed: false
+PackageChecksum: SHA256: 50d0f3ff5e8ad7119d1a5295f42577c49f3ea89a5f7f126184f9a6b72dd88b08
+PackageHomePage: https://golang.org/x/term
+PackageLicenseConcluded: NOASSERTION
+PackageLicenseDeclared: NOASSERTION
+PackageCopyrightText: NOASSERTION
+PackageLicenseComments: NOASSERTION
+PackageComment: NOASSERTION
+
+Relationship: SPDXRef-Package-golang.org.x.term-v0.17.0 DEPENDS_ON SPDXRef-Package-golang.org.x.sys-v0.17.0 
+
+##### Package representing the github.com/rivo/tview
+
+PackageName: github.com/rivo/tview
+SPDXID: SPDXRef-Package-github.com.rivo.tview-v0.0.0-20240921122403-a64fc48d7654
+PackageVersion: v0.0.0-20240921122403-a64fc48d7654
+PackageSupplier: Organization: github.com/rivo/tview
+PackageDownloadLocation: https://github.com/rivo/tview/releases/tag/v0.0.0-20240921122403-a64fc48d7654
+FilesAnalyzed: false
+PackageChecksum: SHA256: a19108e7b149feac2a4ddf1459512b5961b3bf74343ab918273240a2270cb8b2
+PackageHomePage: https://github.com/rivo/tview
+PackageLicenseConcluded: NOASSERTION
+PackageLicenseDeclared: NOASSERTION
+PackageCopyrightText: NOASSERTION
+PackageLicenseComments: NOASSERTION
+PackageComment: NOASSERTION
+
+Relationship: SPDXRef-Package-github.com.rivo.tview-v0.0.0-20240921122403-a64fc48d7654 DEPENDS_ON SPDXRef-Package-golang.org.x.sys-v0.17.0 
+Relationship: SPDXRef-Package-github.com.rivo.tview-v0.0.0-20240921122403-a64fc48d7654 DEPENDS_ON SPDXRef-Package-golang.org.x.term-v0.17.0 
+Relationship: SPDXRef-Package-github.com.rivo.tview-v0.0.0-20240921122403-a64fc48d7654 DEPENDS_ON SPDXRef-Package-golang.org.x.text-v0.14.0 
+Relationship: SPDXRef-Package-github.com.rivo.tview-v0.0.0-20240921122403-a64fc48d7654 DEPENDS_ON SPDXRef-Package-github.com.gdamore.tcell.v2-v2.7.1 
+Relationship: SPDXRef-Package-github.com.rivo.tview-v0.0.0-20240921122403-a64fc48d7654 DEPENDS_ON SPDXRef-Package-github.com.lucasb-eyer.go-colorful-v1.2.0 
+Relationship: SPDXRef-Package-github.com.rivo.tview-v0.0.0-20240921122403-a64fc48d7654 DEPENDS_ON SPDXRef-Package-github.com.rivo.uniseg-v0.4.7 
+Relationship: SPDXRef-Package-github.com.rivo.tview-v0.0.0-20240921122403-a64fc48d7654 DEPENDS_ON SPDXRef-Package-github.com.gdamore.encoding-v1.0.0 
+Relationship: SPDXRef-Package-github.com.rivo.tview-v0.0.0-20240921122403-a64fc48d7654 DEPENDS_ON SPDXRef-Package-github.com.mattn.go-runewidth-v0.0.15 
+

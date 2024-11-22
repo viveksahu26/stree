@@ -1,0 +1,417 @@
+{
+	"spdxVersion": "SPDX-2.2",
+	"dataLicense": "CC0-1.0",
+	"SPDXID": "SPDXRef-DOCUMENT",
+	"name": "github.com/viveksahu26/stree",
+	"documentNamespace": "http://spdx.org/spdxpackages/github.com/viveksahu26/stree-a99b0658-df30-4cd2-bb45-4732ca829e53",
+	"creationInfo": {
+		"created": "2024-11-22T16:24:44Z",
+		"creators": [
+			"Tool: spdx-sbom-generator-v0.0.15"
+		]
+	},
+	"packages": [
+		{
+			"name": "github.com/viveksahu26/stree",
+			"SPDXID": "SPDXRef-Package-github.com.viveksahu26.stree",
+			"versionInfo": "3eb800a",
+			"supplier": "Organization: github.com/viveksahu26/stree",
+			"downloadLocation": "git+https://github.com/viveksahu26/stree.git",
+			"filesAnalyzed": false,
+			"checksums": [
+				{
+					"algorithm": "SHA256",
+					"checksumValue": "dfe3f30b5443f3cbffc1d209f1a2101c5f204987ac0320d6df1586fb4fd5d9e8"
+				}
+			],
+			"homepage": "https://github.com/viveksahu26/stree",
+			"licenseConcluded": "NOASSERTION",
+			"licenseDeclared": "NOASSERTION",
+			"copyrightText": "NOASSERTION",
+			"licenseComments": "NOASSERTION",
+			"comment": "NOASSERTION"
+		},
+		{
+			"name": "github.com/spf13/pflag",
+			"SPDXID": "SPDXRef-Package-github.com.spf13.pflag-v1.0.5",
+			"versionInfo": "v1.0.5",
+			"supplier": "Organization: github.com/spf13/pflag",
+			"downloadLocation": "https://github.com/spf13/pflag/releases/tag/v1.0.5",
+			"filesAnalyzed": false,
+			"checksums": [
+				{
+					"algorithm": "SHA256",
+					"checksumValue": "db8e07f706a9790e22cc14adc9bdb4a01da656c31836bf03128136c06a1cd3cc"
+				}
+			],
+			"homepage": "https://github.com/spf13/pflag",
+			"licenseConcluded": "NOASSERTION",
+			"licenseDeclared": "NOASSERTION",
+			"copyrightText": "NOASSERTION",
+			"licenseComments": "NOASSERTION",
+			"comment": "NOASSERTION"
+		},
+		{
+			"name": "github.com/spf13/cobra",
+			"SPDXID": "SPDXRef-Package-github.com.spf13.cobra-v1.8.1",
+			"versionInfo": "v1.8.1",
+			"supplier": "Organization: github.com/spf13/cobra",
+			"downloadLocation": "https://github.com/spf13/cobra/releases/tag/v1.8.1",
+			"filesAnalyzed": false,
+			"checksums": [
+				{
+					"algorithm": "SHA256",
+					"checksumValue": "775b44772e0243d41547a3ebcadffd35bcaf912b2e6281fe69ea5391729dbc5e"
+				}
+			],
+			"homepage": "https://github.com/spf13/cobra",
+			"licenseConcluded": "NOASSERTION",
+			"licenseDeclared": "NOASSERTION",
+			"copyrightText": "NOASSERTION",
+			"licenseComments": "NOASSERTION",
+			"comment": "NOASSERTION"
+		},
+		{
+			"name": "golang.org/x/text",
+			"SPDXID": "SPDXRef-Package-golang.org.x.text-v0.14.0",
+			"versionInfo": "v0.14.0",
+			"supplier": "Organization: golang.org/x/text",
+			"downloadLocation": "https://golang.org/x/text",
+			"filesAnalyzed": false,
+			"checksums": [
+				{
+					"algorithm": "SHA256",
+					"checksumValue": "c2ac2b46b7845301c6f4ba9aff3c0e7707fd18b2e6def9a8b78d708dd3bb0850"
+				}
+			],
+			"homepage": "https://golang.org/x/text",
+			"licenseConcluded": "NOASSERTION",
+			"licenseDeclared": "NOASSERTION",
+			"copyrightText": "NOASSERTION",
+			"licenseComments": "NOASSERTION",
+			"comment": "NOASSERTION"
+		},
+		{
+			"name": "github.com/gdamore/encoding",
+			"SPDXID": "SPDXRef-Package-github.com.gdamore.encoding-v1.0.0",
+			"versionInfo": "v1.0.0",
+			"supplier": "Organization: github.com/gdamore/encoding",
+			"downloadLocation": "https://github.com/gdamore/encoding/releases/tag/v1.0.0",
+			"filesAnalyzed": false,
+			"checksums": [
+				{
+					"algorithm": "SHA256",
+					"checksumValue": "f3024fcd297ed3071133f272df59609a872c690ec27e56774264bdb87bd7e586"
+				}
+			],
+			"homepage": "https://github.com/gdamore/encoding",
+			"licenseConcluded": "NOASSERTION",
+			"licenseDeclared": "NOASSERTION",
+			"copyrightText": "NOASSERTION",
+			"licenseComments": "NOASSERTION",
+			"comment": "NOASSERTION"
+		},
+		{
+			"name": "github.com/gdamore/tcell/v2",
+			"SPDXID": "SPDXRef-Package-github.com.gdamore.tcell.v2-v2.7.1",
+			"versionInfo": "v2.7.1",
+			"supplier": "Organization: github.com/gdamore/tcell/v2",
+			"downloadLocation": "https://github.com/gdamore/tcell/v2/releases/tag/v2.7.1",
+			"filesAnalyzed": false,
+			"checksums": [
+				{
+					"algorithm": "SHA256",
+					"checksumValue": "9564b9cec13800995a60d11c6bd4d34449230df2c7130a19cfba3ec111f76ea9"
+				}
+			],
+			"homepage": "https://github.com/gdamore/tcell/v2",
+			"licenseConcluded": "NOASSERTION",
+			"licenseDeclared": "NOASSERTION",
+			"copyrightText": "NOASSERTION",
+			"licenseComments": "NOASSERTION",
+			"comment": "NOASSERTION"
+		},
+		{
+			"name": "github.com/lucasb-eyer/go-colorful",
+			"SPDXID": "SPDXRef-Package-github.com.lucasb-eyer.go-colorful-v1.2.0",
+			"versionInfo": "v1.2.0",
+			"supplier": "Organization: github.com/lucasb-eyer/go-colorful",
+			"downloadLocation": "https://github.com/lucasb-eyer/go-colorful/releases/tag/v1.2.0",
+			"filesAnalyzed": false,
+			"checksums": [
+				{
+					"algorithm": "SHA256",
+					"checksumValue": "f7ea778a81127b17f11d99d59fb33376fe5fad13d9fa47e2d0de399f10e5baae"
+				}
+			],
+			"homepage": "https://github.com/lucasb-eyer/go-colorful",
+			"licenseConcluded": "NOASSERTION",
+			"licenseDeclared": "NOASSERTION",
+			"copyrightText": "NOASSERTION",
+			"licenseComments": "NOASSERTION",
+			"comment": "NOASSERTION"
+		},
+		{
+			"name": "github.com/rivo/uniseg",
+			"SPDXID": "SPDXRef-Package-github.com.rivo.uniseg-v0.4.7",
+			"versionInfo": "v0.4.7",
+			"supplier": "Organization: github.com/rivo/uniseg",
+			"downloadLocation": "https://github.com/rivo/uniseg/releases/tag/v0.4.7",
+			"filesAnalyzed": false,
+			"checksums": [
+				{
+					"algorithm": "SHA256",
+					"checksumValue": "21d0b63727c040eaceb2c6ed3427b220d8b2686ea100cbe242a99044b3a3115e"
+				}
+			],
+			"homepage": "https://github.com/rivo/uniseg",
+			"licenseConcluded": "NOASSERTION",
+			"licenseDeclared": "NOASSERTION",
+			"copyrightText": "NOASSERTION",
+			"licenseComments": "NOASSERTION",
+			"comment": "NOASSERTION"
+		},
+		{
+			"name": "github.com/mattn/go-runewidth",
+			"SPDXID": "SPDXRef-Package-github.com.mattn.go-runewidth-v0.0.15",
+			"versionInfo": "v0.0.15",
+			"supplier": "Organization: github.com/mattn/go-runewidth",
+			"downloadLocation": "https://github.com/mattn/go-runewidth/releases/tag/v0.0.15",
+			"filesAnalyzed": false,
+			"checksums": [
+				{
+					"algorithm": "SHA256",
+					"checksumValue": "5dcafaad1c1bb098781e768d94ce0cc1eb76ce74545d190a1bebd5e42ebba287"
+				}
+			],
+			"homepage": "https://github.com/mattn/go-runewidth",
+			"licenseConcluded": "NOASSERTION",
+			"licenseDeclared": "NOASSERTION",
+			"copyrightText": "NOASSERTION",
+			"licenseComments": "NOASSERTION",
+			"comment": "NOASSERTION"
+		},
+		{
+			"name": "golang.org/x/sys",
+			"SPDXID": "SPDXRef-Package-golang.org.x.sys-v0.17.0",
+			"versionInfo": "v0.17.0",
+			"supplier": "Organization: golang.org/x/sys",
+			"downloadLocation": "https://golang.org/x/sys",
+			"filesAnalyzed": false,
+			"checksums": [
+				{
+					"algorithm": "SHA256",
+					"checksumValue": "bbdc61d63609a4cba9f89fb0b5ff0831257a2cafa0af17806c8bc7e4f2a3c813"
+				}
+			],
+			"homepage": "https://golang.org/x/sys",
+			"licenseConcluded": "NOASSERTION",
+			"licenseDeclared": "NOASSERTION",
+			"copyrightText": "NOASSERTION",
+			"licenseComments": "NOASSERTION",
+			"comment": "NOASSERTION"
+		},
+		{
+			"name": "golang.org/x/term",
+			"SPDXID": "SPDXRef-Package-golang.org.x.term-v0.17.0",
+			"versionInfo": "v0.17.0",
+			"supplier": "Organization: golang.org/x/term",
+			"downloadLocation": "https://golang.org/x/term",
+			"filesAnalyzed": false,
+			"checksums": [
+				{
+					"algorithm": "SHA256",
+					"checksumValue": "50d0f3ff5e8ad7119d1a5295f42577c49f3ea89a5f7f126184f9a6b72dd88b08"
+				}
+			],
+			"homepage": "https://golang.org/x/term",
+			"licenseConcluded": "NOASSERTION",
+			"licenseDeclared": "NOASSERTION",
+			"copyrightText": "NOASSERTION",
+			"licenseComments": "NOASSERTION",
+			"comment": "NOASSERTION"
+		},
+		{
+			"name": "github.com/rivo/tview",
+			"SPDXID": "SPDXRef-Package-github.com.rivo.tview-v0.0.0-20240921122403-a64fc48d7654",
+			"versionInfo": "v0.0.0-20240921122403-a64fc48d7654",
+			"supplier": "Organization: github.com/rivo/tview",
+			"downloadLocation": "https://github.com/rivo/tview/releases/tag/v0.0.0-20240921122403-a64fc48d7654",
+			"filesAnalyzed": false,
+			"checksums": [
+				{
+					"algorithm": "SHA256",
+					"checksumValue": "a19108e7b149feac2a4ddf1459512b5961b3bf74343ab918273240a2270cb8b2"
+				}
+			],
+			"homepage": "https://github.com/rivo/tview",
+			"licenseConcluded": "NOASSERTION",
+			"licenseDeclared": "NOASSERTION",
+			"copyrightText": "NOASSERTION",
+			"licenseComments": "NOASSERTION",
+			"comment": "NOASSERTION"
+		}
+	],
+	"relationships": [
+		{
+			"spdxElementId": "SPDXRef-DOCUMENT",
+			"relatedSpdxElement": "SPDXRef-Package-github.com.viveksahu26.stree",
+			"relationshipType": "DESCRIBES"
+		},
+		{
+			"spdxElementId": "SPDXRef-Package-github.com.viveksahu26.stree",
+			"relatedSpdxElement": "SPDXRef-Package-github.com.gdamore.encoding-v1.0.0",
+			"relationshipType": "DEPENDS_ON"
+		},
+		{
+			"spdxElementId": "SPDXRef-Package-github.com.viveksahu26.stree",
+			"relatedSpdxElement": "SPDXRef-Package-github.com.gdamore.tcell.v2-v2.7.1",
+			"relationshipType": "DEPENDS_ON"
+		},
+		{
+			"spdxElementId": "SPDXRef-Package-github.com.viveksahu26.stree",
+			"relatedSpdxElement": "SPDXRef-Package-github.com.rivo.uniseg-v0.4.7",
+			"relationshipType": "DEPENDS_ON"
+		},
+		{
+			"spdxElementId": "SPDXRef-Package-github.com.viveksahu26.stree",
+			"relatedSpdxElement": "SPDXRef-Package-github.com.spf13.cobra-v1.8.1",
+			"relationshipType": "DEPENDS_ON"
+		},
+		{
+			"spdxElementId": "SPDXRef-Package-github.com.viveksahu26.stree",
+			"relatedSpdxElement": "SPDXRef-Package-golang.org.x.sys-v0.17.0",
+			"relationshipType": "DEPENDS_ON"
+		},
+		{
+			"spdxElementId": "SPDXRef-Package-github.com.viveksahu26.stree",
+			"relatedSpdxElement": "SPDXRef-Package-github.com.lucasb-eyer.go-colorful-v1.2.0",
+			"relationshipType": "DEPENDS_ON"
+		},
+		{
+			"spdxElementId": "SPDXRef-Package-github.com.viveksahu26.stree",
+			"relatedSpdxElement": "SPDXRef-Package-github.com.mattn.go-runewidth-v0.0.15",
+			"relationshipType": "DEPENDS_ON"
+		},
+		{
+			"spdxElementId": "SPDXRef-Package-github.com.viveksahu26.stree",
+			"relatedSpdxElement": "SPDXRef-Package-github.com.rivo.tview-v0.0.0-20240921122403-a64fc48d7654",
+			"relationshipType": "DEPENDS_ON"
+		},
+		{
+			"spdxElementId": "SPDXRef-Package-github.com.viveksahu26.stree",
+			"relatedSpdxElement": "SPDXRef-Package-github.com.spf13.pflag-v1.0.5",
+			"relationshipType": "DEPENDS_ON"
+		},
+		{
+			"spdxElementId": "SPDXRef-Package-github.com.viveksahu26.stree",
+			"relatedSpdxElement": "SPDXRef-Package-golang.org.x.term-v0.17.0",
+			"relationshipType": "DEPENDS_ON"
+		},
+		{
+			"spdxElementId": "SPDXRef-Package-github.com.viveksahu26.stree",
+			"relatedSpdxElement": "SPDXRef-Package-golang.org.x.text-v0.14.0",
+			"relationshipType": "DEPENDS_ON"
+		},
+		{
+			"spdxElementId": "SPDXRef-Package-github.com.spf13.cobra-v1.8.1",
+			"relatedSpdxElement": "SPDXRef-Package-github.com.spf13.pflag-v1.0.5",
+			"relationshipType": "DEPENDS_ON"
+		},
+		{
+			"spdxElementId": "SPDXRef-Package-golang.org.x.text-v0.14.0",
+			"relatedSpdxElement": "SPDXRef-Package-golang.org.x.sys-v0.17.0",
+			"relationshipType": "DEPENDS_ON"
+		},
+		{
+			"spdxElementId": "SPDXRef-Package-github.com.gdamore.encoding-v1.0.0",
+			"relatedSpdxElement": "SPDXRef-Package-golang.org.x.text-v0.14.0",
+			"relationshipType": "DEPENDS_ON"
+		},
+		{
+			"spdxElementId": "SPDXRef-Package-github.com.gdamore.tcell.v2-v2.7.1",
+			"relatedSpdxElement": "SPDXRef-Package-github.com.rivo.uniseg-v0.4.7",
+			"relationshipType": "DEPENDS_ON"
+		},
+		{
+			"spdxElementId": "SPDXRef-Package-github.com.gdamore.tcell.v2-v2.7.1",
+			"relatedSpdxElement": "SPDXRef-Package-golang.org.x.sys-v0.17.0",
+			"relationshipType": "DEPENDS_ON"
+		},
+		{
+			"spdxElementId": "SPDXRef-Package-github.com.gdamore.tcell.v2-v2.7.1",
+			"relatedSpdxElement": "SPDXRef-Package-golang.org.x.term-v0.17.0",
+			"relationshipType": "DEPENDS_ON"
+		},
+		{
+			"spdxElementId": "SPDXRef-Package-github.com.gdamore.tcell.v2-v2.7.1",
+			"relatedSpdxElement": "SPDXRef-Package-golang.org.x.text-v0.14.0",
+			"relationshipType": "DEPENDS_ON"
+		},
+		{
+			"spdxElementId": "SPDXRef-Package-github.com.gdamore.tcell.v2-v2.7.1",
+			"relatedSpdxElement": "SPDXRef-Package-github.com.gdamore.encoding-v1.0.0",
+			"relationshipType": "DEPENDS_ON"
+		},
+		{
+			"spdxElementId": "SPDXRef-Package-github.com.gdamore.tcell.v2-v2.7.1",
+			"relatedSpdxElement": "SPDXRef-Package-github.com.lucasb-eyer.go-colorful-v1.2.0",
+			"relationshipType": "DEPENDS_ON"
+		},
+		{
+			"spdxElementId": "SPDXRef-Package-github.com.gdamore.tcell.v2-v2.7.1",
+			"relatedSpdxElement": "SPDXRef-Package-github.com.mattn.go-runewidth-v0.0.15",
+			"relationshipType": "DEPENDS_ON"
+		},
+		{
+			"spdxElementId": "SPDXRef-Package-github.com.mattn.go-runewidth-v0.0.15",
+			"relatedSpdxElement": "SPDXRef-Package-github.com.rivo.uniseg-v0.4.7",
+			"relationshipType": "DEPENDS_ON"
+		},
+		{
+			"spdxElementId": "SPDXRef-Package-golang.org.x.term-v0.17.0",
+			"relatedSpdxElement": "SPDXRef-Package-golang.org.x.sys-v0.17.0",
+			"relationshipType": "DEPENDS_ON"
+		},
+		{
+			"spdxElementId": "SPDXRef-Package-github.com.rivo.tview-v0.0.0-20240921122403-a64fc48d7654",
+			"relatedSpdxElement": "SPDXRef-Package-github.com.gdamore.encoding-v1.0.0",
+			"relationshipType": "DEPENDS_ON"
+		},
+		{
+			"spdxElementId": "SPDXRef-Package-github.com.rivo.tview-v0.0.0-20240921122403-a64fc48d7654",
+			"relatedSpdxElement": "SPDXRef-Package-github.com.mattn.go-runewidth-v0.0.15",
+			"relationshipType": "DEPENDS_ON"
+		},
+		{
+			"spdxElementId": "SPDXRef-Package-github.com.rivo.tview-v0.0.0-20240921122403-a64fc48d7654",
+			"relatedSpdxElement": "SPDXRef-Package-golang.org.x.sys-v0.17.0",
+			"relationshipType": "DEPENDS_ON"
+		},
+		{
+			"spdxElementId": "SPDXRef-Package-github.com.rivo.tview-v0.0.0-20240921122403-a64fc48d7654",
+			"relatedSpdxElement": "SPDXRef-Package-golang.org.x.term-v0.17.0",
+			"relationshipType": "DEPENDS_ON"
+		},
+		{
+			"spdxElementId": "SPDXRef-Package-github.com.rivo.tview-v0.0.0-20240921122403-a64fc48d7654",
+			"relatedSpdxElement": "SPDXRef-Package-golang.org.x.text-v0.14.0",
+			"relationshipType": "DEPENDS_ON"
+		},
+		{
+			"spdxElementId": "SPDXRef-Package-github.com.rivo.tview-v0.0.0-20240921122403-a64fc48d7654",
+			"relatedSpdxElement": "SPDXRef-Package-github.com.gdamore.tcell.v2-v2.7.1",
+			"relationshipType": "DEPENDS_ON"
+		},
+		{
+			"spdxElementId": "SPDXRef-Package-github.com.rivo.tview-v0.0.0-20240921122403-a64fc48d7654",
+			"relatedSpdxElement": "SPDXRef-Package-github.com.lucasb-eyer.go-colorful-v1.2.0",
+			"relationshipType": "DEPENDS_ON"
+		},
+		{
+			"spdxElementId": "SPDXRef-Package-github.com.rivo.tview-v0.0.0-20240921122403-a64fc48d7654",
+			"relatedSpdxElement": "SPDXRef-Package-github.com.rivo.uniseg-v0.4.7",
+			"relationshipType": "DEPENDS_ON"
+		}
+	]
+}
