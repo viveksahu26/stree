@@ -61,7 +61,6 @@ snapshot:
   name_template: SNAPSHOT-{{ .ShortCommit }}
 
 release:
-  prerelease: allow
   draft: true
 
 sboms:
