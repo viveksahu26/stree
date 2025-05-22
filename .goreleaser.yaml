@@ -16,7 +16,7 @@ builds:
   - id: binaries
     binary: stree-{{ .Os }}-{{ .Arch }}
     no_unique_dist_dir: true
-    main: .
+    main: ./cmd/stree/
     flags:
       - -trimpath
     mod_timestamp: '{{ .CommitTimestamp }}'
