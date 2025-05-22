@@ -23,3 +23,7 @@ We will keep making changing small changes for every new releases
 ## Release v0.0.7
 
 - New Release v0.0.7
+
+## Release v0.0.8
+
+- New Release v0.0.8
