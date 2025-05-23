@@ -27,3 +27,7 @@ We will keep making changing small changes for every new releases
 ## Release v0.0.8
 
 - New Release v0.0.8
+
+## Release v0.0.9
+
+- New Release v0.0.9
