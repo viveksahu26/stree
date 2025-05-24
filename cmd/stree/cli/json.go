@@ -18,10 +18,10 @@ func Json() *cobra.Command {
 		Example: ` tree json [--out <path>] <json file>
 
 	# create a tree directory like structure for the provided json
-	tree json example-sca.json
+	stree json example-sca.json
 
 	# create a tree directory like structure for the provided json and output into provided file
-	tree json -o <output-new-file.json>  example-sca.json
+	stree json -o <output-new-file.json>  example-sca.json
 
 		
 		`,
