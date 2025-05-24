@@ -70,6 +70,7 @@ func BuildTreeNode(pkg Package, depth int, doesNodenameToBeShort bool) *tview.Tr
 	if doesNodenameToBeShort {
 		nodeText = ShortName(nodeText)
 	}
+
 	color := colors[depth%len(colors)]
 
 	tv := tview.NewTreeNode(nodeText).SetColor(color)
