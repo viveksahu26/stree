@@ -59,3 +59,7 @@ We will keep making changing small changes for every new releases
 ## Release v0.0.18
 
 - New Release v0.0.18
+
+## Release v0.0.19
+
+- New Release v0.0.19
