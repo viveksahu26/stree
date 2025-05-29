@@ -71,3 +71,7 @@ We will keep making changing small changes for every new releases
 ## Release v0.0.21
 
 - New Release v0.0.21
+
+## Release v0.0.22
+
+- New Release v0.0.22
