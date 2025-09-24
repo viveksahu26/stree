@@ -1,0 +1,224 @@
+---
+name: Phase 1 - Stree
+
+on:
+  release:
+    types:
+      - published
+
+env:
+  PARLAY_VERSION: 0.8.0
+  SBOMASM_VERSION: 1.0.8
+  SBOMQS_VERSION: 1.2.0
+  TRIVY_VERSION: 0.66.0
+
+jobs:
+  Generate:
+    runs-on: ubuntu-latest
+    # Use the release tag that triggered the workflow as KEYCLOAK_TAG
+    env:
+      STREE_TAG: ${{ github.event.release.tag_name }}
+    steps:
+      - name: Install Trivy
+        run: |
+          curl -L -o /tmp/trivy.tgz \
+            "https://github.com/aquasecurity/trivy/releases/download/v${TRIVY_VERSION}/trivy_${TRIVY_VERSION}_Linux-64bit.tar.gz"
+          tar xvf /tmp/trivy.tgz -C /tmp
+          chmod +x /tmp/trivy
+
+      - name: Checkout Stree
+        run: |
+          curl -L -o /tmp/stree.tgz \
+            "https://github.com/viveksahu26/stree/archive/refs/tags/${STREE_TAG}.tar.gz"
+          tar xvf /tmp/stree.tgz -C .
+
+      - name: Generate SBOM with Trivy
+        run: |
+          /tmp/trivy fs \
+            --timeout 30m0s \
+            --parallel 0 \
+            --format cyclonedx \
+            --skip-db-update \
+            --offline-scan \
+            --output /tmp/generated-stree-sbom.cdx.json \
+            stree-${STREE_TAG}
+
+          /tmp/trivy fs \
+            --timeout 30m0s \
+            --parallel 0 \
+            --format spdx-json \
+            --skip-db-update \
+            --offline-scan \
+            --output /tmp/generated-stree-sbom.spdx.json \
+            stree-${STREE_TAG}
+
+      - name: Upload Generated CycloneDX SBOM
+        uses: actions/upload-artifact@65c4c4a1ddee5b72f698fdd19549f0f0fb45cf08 # v4
+        with:
+          name: generated-stree-sbom-cyclonedx
+          path: "/tmp/generated-stree-sbom.cdx.json"
+
+      - name: Upload Generated SPDX SBOM
+        uses: actions/upload-artifact@65c4c4a1ddee5b72f698fdd19549f0f0fb45cf08 # v4
+        with:
+          name: generated-stree-sbom-spdx
+          path: "/tmp/generated-stree-sbom.spdx.json"
+
+  Augment:
+    runs-on: ubuntu-latest
+    needs: Generate
+    steps:
+
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
+
+      - name: Download all workflow run artifacts
+        uses: actions/download-artifact@fa0a91b85d4f404e444e00e005971372dc801d16 # v4
+
+      - name: Install sbomasm
+        run: |
+          curl -L -o /tmp/sbomasm \
+            "https://github.com/interlynk-io/sbomasm/releases/download/v${SBOMASM_VERSION}/sbomasm-linux-amd64"
+          chmod +x /tmp/sbomasm
+
+      - name: Augment Stree SPDX
+        run: |
+          # Augment the Generated SPDX with updated document information
+          #   - Using `--append` option to ensure the author information is appended instead
+          #     of replacing the tool information.
+          /tmp/sbomasm edit --append --subject Document \
+              --author 'Vivek Kumar (vivekkumarsahu650@gmail.com)' \
+              --supplier 'Vivek Kumar (https://viveksahu26.github.io/)' \
+              --license 'Apache-2.0 (https://raw.githubusercontent.com/viveksahu26/stree/refs/heads/main/LICENSE.txt)' \
+              /tmp/generated-stree-sbom.spdx.json > /tmp/augmented_stree-sbom.spdx.json
+
+          # Augment the Generated SPDX with updated primary component information
+          /tmp/sbomasm edit --subject primary-component \
+              --supplier 'Vivek Kumar (https://viveksahu26.github.io/)' \
+              --author 'Vivek Kumar (vivekkumarsahu650@gmail.com)' \
+              --repository 'https://github.com/viveksahu26/stree' \
+              --license 'Apache-2.0 (https://raw.githubusercontent.com/viveksahu26/stree/refs/heads/main/LICENSE.txt)' \
+              /tmp/augmented_stree-sbom.spdx.json > /tmp/augmented_fine-stree-sbom.spdx.json
+
+      - name: Augment Stree CycloneDX
+        run: |
+          # Augment the Generated CycloneDX with updated document information
+          /tmp/sbomasm edit --subject Document \
+              --author 'Vivek Kumar (vivekkumarsahu650@gmail.com)' \
+              --supplier 'Vivek Kumar (https://viveksahu26.github.io/)' \
+              --lifecycle 'pre-build' \
+              --repository 'https://github.com/viveksahu26/stree/' \
+              --license 'Apache-2.0 (https://raw.githubusercontent.com/viveksahu26/stree/refs/heads/main/LICENSE.txt)' \
+              /tmp/generated-stree-sbom.cdx.json > /tmp/augmented_stree-sbom.cdx.json
+
+          # Augment the Generated CycloneDX with updated primary component information
+          /tmp/sbomasm edit --subject primary-component \
+              --author 'Vivek Kumar (vivekkumarsahu650@gmail.com)' \
+              --supplier 'Vivek Kumar (https://viveksahu26.github.io/)' \
+              --repository 'https://github.com/viveksahu26/stree' \
+              --license 'Apache-2.0 (https://raw.githubusercontent.com/viveksahu26/stree/refs/heads/main/LICENSE.txt)' \
+              /tmp/augmented_stree-sbom.cdx.json > /tmp/augmented_fine-stree-sbom.cdx.json
+
+      - name: Upload Augmented SPDX SBOM
+        uses: actions/upload-artifact@65c4c4a1ddee5b72f698fdd19549f0f0fb45cf08 # v4
+        with:
+          name: augmented-stree-sbom-spdx
+          path: "/tmp/augmented_fine-stree-sbom.spdx.json"
+
+      - name: Upload Augmented CycloneDX SBOM
+        uses: actions/upload-artifact@65c4c4a1ddee5b72f698fdd19549f0f0fb45cf08 # v4
+        with:
+          name: augmented-stree-sbom-cyclonedx
+          path: "/tmp/augmented_fine-stree-sbom.cdx.json"
+
+  Enrich:
+    runs-on: ubuntu-latest
+    needs: Augment
+    steps:
+
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
+
+      - name: Download all workflow run artifacts
+        uses: actions/download-artifact@fa0a91b85d4f404e444e00e005971372dc801d16 # v4
+
+      - name: Install parlay
+        run: |
+          curl -Ls https://github.com/snyk/parlay/releases/download/v${PARLAY_VERSION}/parlay_Linux_x86_64.tar.gz | tar xvz -C /tmp
+          chmod +x /tmp/parlay
+
+      - name: Enrich Stree CycloneDX
+        run: |
+          /tmp/parlay ecosystems enrich \
+            /tmp/augmented_fine-stree-sbom.cdx.json > /tmp/enriched_stree-sbom.cdx.json
+
+      - name: Enrich Stree SPDX
+        run: |
+          /tmp/parlay ecosystems enrich \
+            /tmp/augmented_fine-stree-sbom.spdx.json > /tmp/enriched_stree-sbom.spdx.json
+
+      - name: Upload Enriched SPDX SBOM
+        uses: actions/upload-artifact@65c4c4a1ddee5b72f698fdd19549f0f0fb45cf08 # v4
+        with:
+          name: enriched-stree-sbom-spdx
+          path: "/tmp/enriched_stree-sbom.spdx.json"
+
+      - name: Upload Enriched CycloneDX SBOM
+        uses: actions/upload-artifact@65c4c4a1ddee5b72f698fdd19549f0f0fb45cf08 # v4
+        with:
+          name: enriched-stree-sbom-cyclonedx
+          path: "/tmp/enriched_stree-sbom.cdx.json"
+
+      - name: Save Final SBOMs
+        run: |
+          cp /tmp/enriched_stree-sbom.spdx.json /tmp/final_stree-sbom.spdx.json
+          cp /tmp/enriched_stree-sbom.cdx.json /tmp/final_stree-sbom.cdx.json
+
+      - name: Upload Final SPDX SBOM
+        uses: actions/upload-artifact@65c4c4a1ddee5b72f698fdd19549f0f0fb45cf08 # v4
+        with:
+          name: final-stree-sbom-spdx
+          path: "/tmp/final_stree-sbom.spdx.json"
+
+      - name: Upload Final CycloneDX SBOM
+        uses: actions/upload-artifact@65c4c4a1ddee5b72f698fdd19549f0f0fb45cf08 # v4
+        with:
+          name: final-stree-sbom-cyclonedx
+          path: "/tmp/final_stree-sbom.cdx.json"
+
+  Verify:
+    needs: Enrich
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
+
+      - name: Download SBOMs
+        uses: actions/download-artifact@fa0a91b85d4f404e444e00e005971372dc801d16 # v4
+
+      - name: Install sbomqs
+        run: |
+          curl -L -o /tmp/sbomqs \
+            "https://github.com/interlynk-io/sbomqs/releases/download/v${SBOMQS_VERSION}/sbomqs-linux-amd64"
+          chmod +x /tmp/sbomqs
+
+      - name: "Display SBOM quality score through sbomqs"
+        run: |
+            # use GITHUB_STEP_SUMMARY when available, otherwise write to /tmp/gh_step_summary
+            SUMMARY="${GITHUB_STEP_SUMMARY:-/tmp/gh_step_summary}"
+
+            # add fence start
+            echo '```' >> "$SUMMARY"
+
+            # score each matching SBOM safely, handling spaces in names
+            find /tmp -maxdepth 1 -iname 'final*.json' -print0 \
+            | while IFS= read -r -d '' SBOM; do
+                # ensure the scorer exists
+                if [[ -x /tmp/sbomqs ]]; then
+                    /tmp/sbomqs score "$SBOM" >> "$SUMMARY"
+                else
+                    echo "sbomqs not found at /tmp/sbomqs" >> "$SUMMARY"
+                    exit 2
+                fi
+                done
+
+            # add fence end
+            echo '```' >> "$SUMMARY"
+
