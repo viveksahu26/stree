@@ -28,8 +28,9 @@ jobs:
 
       - name: Checkout Stree
         run: |
+          echo "STREE_TAG: $STREE_TAG"
           curl -L -o /tmp/stree.tgz \
-            "https://github.com/viveksahu26/stree/archive/refs/tags/v${STREE_TAG}.tar.gz"
+            "https://github.com/viveksahu26/stree/archive/refs/tags/${STREE_TAG}.tar.gz"
           tar xvf /tmp/stree.tgz -C .
 
       - name: Generate SBOM with Trivy
