@@ -10,13 +10,12 @@ before:
     - /bin/bash -c 'if [ -n "$(git --no-pager diff --exit-code go.mod go.sum)" ]; then exit 1; fi'
 
 gomod:
-  proxy: true
+  proxy: false
 
 builds:
-  - id: binaries
-    binary: stree-{{ .Os }}-{{ .Arch }}
-    no_unique_dist_dir: true
-    main: ./cmd/stree/
+  - id: stree
+    binary: stree
+    main: .
     flags:
       - -trimpath
     mod_timestamp: '{{ .CommitTimestamp }}'
@@ -28,9 +27,26 @@ builds:
       - amd64
       - arm64
     ldflags:
-      - "{{ .Env.LDFLAGS }}"
+      - -buildid=
+      - -X sigs.k8s.io/release-utils/version.gitVersion={{ .Version }}
+      - -X sigs.k8s.io/release-utils/version.gitCommit={{ .FullCommit }}
+      - -X sigs.k8s.io/release-utils/version.gitTreeState={{ if .IsGitDirty }}dirty{{ else }}clean{{ end }}
+      - -X sigs.k8s.io/release-utils/version.buildDate={{ .CommitDate }}
     env:
       - CGO_ENABLED=0
+
+signs:
+- cmd: stree
+  env:
+  - COSIGN_EXPERIMENTAL=1
+  signature: "${artifact}.sigstore.json"
+  args:
+    - "sign-blob"
+    - "--bundle=${signature}"
+    - "${artifact}"
+    - "--yes"
+  artifacts: archive
+  output: true
 
 nfpms:
   - id: stree
@@ -39,32 +55,38 @@ nfpms:
     vendor: viveksahu26
     homepage: https://github.com/viveksahu26/
     maintainer: Vivek Sahu Authors vivekkumarsahu650@gmail.com
-    ids:
-      - binaries
     description: For a provided SBOM, it helps vizualize the relationships between the components and their dependencies in a directory Tree or file Tree structure like tree command does for linux.
     license: "Apache License 2.0"
     formats:
       - apk
       - deb
       - rpm
+    bindir: /usr/bin
     contents:
-      - src: /usr/bin/stree-{{ .Os }}-{{ .Arch }}
-        dst: /usr/bin/stree
-        type: "symlink"
+      - src: LICENSE
+        dst: /usr/share/doc/stree/LICENSE
+        file_info:
+          mode: 0644
 
 archives:
-- formats: ['binary']
-  name_template: "{{ .Binary }}"
-  allow_different_binary_count: true
+  - id: stree
+    name_template: >-
+      {{ .ProjectName }}_
+      {{- .Version }}_
+      {{- title .Os }}_
+      {{- if eq .Arch "amd64" }}x86_64
+      {{- else if eq .Arch "386" }}i386
+      {{- else }}{{ .Arch }}{{ end }}
+      {{- if .Arm }}v{{ .Arm }}{{ end }}
+    files:
+      - LICENSE*
+      - README*
+      - CHANGELOG*
 
 snapshot:
   version_template: SNAPSHOT-{{ .ShortCommit }}
 
 release:
+  prerelease: auto
   draft: true
-
-sboms:
-  -
-    artifacts: binary
-    documents:
-      - "${artifact}.spdx.sbom"
+  make_latest: true 
