@@ -30,36 +30,65 @@ LDFLAGS=-buildid= -X $(PKG).gitVersion=$(GIT_VERSION) \
 
 
 BUILD_DIR = ./build
+BINARY_NAME = stree
+TARGETOS ?= $(shell go env GOOS)
+TARGETARCH ?= $(shell go env GOARCH)
 
-.PHONY: dep
-dep:
-	go mod vendor
-	go mod tidy
+.PHONY: deps
+deps: ## Download dependencies
+	@echo "Downloading dependencies..."
+	@go mod download
+	@go mod tidy
 
-.PHONY: generate
-generate:
-	go generate ./...
+.PHONY: fmt
+fmt: ## Run go fmt
+	@echo "Formatting code..."
+	@go fmt ./...
 
 .PHONY: test
-test: generate
-	go test -cover -race ./...
+test: generate ## Run all tests
+	@echo "Running tests..."
+	@go test -cover -race ./...
 
 .PHONY: build
-build:
-	CGO_ENABLED=0 go build -trimpath -ldflags "$(LDFLAGS)" -o $(BUILD_DIR)/sbommv main.go
+build: ## Build binary for current platform
+	@echo "Building $(BINARY_NAME) for $(TARGETOS)/$(TARGETARCH)..."
+	@mkdir -p $(BUILD_DIR)
+	@CGO_ENABLED=0 GOOS=$(TARGETOS) GOARCH=$(TARGETARCH) go build -mod=readonly -trimpath -ldflags "$(LDFLAGS)" -o $(BUILD_DIR)/$(BINARY_NAME) .
+
+.PHONY: build-all
+build-all: ## Build binaries for all platforms
+	@echo "Building for all platforms..."
+	@mkdir -p $(BUILD_DIR)
+	@GOOS=linux GOARCH=amd64 go build -mod=readonly -trimpath -ldflags "$(LDFLAGS)" -o $(BUILD_DIR)/$(BINARY_NAME)-linux-amd64 .
+	@GOOS=linux GOARCH=arm64 go build -mod=readonly -trimpath -ldflags "$(LDFLAGS)" -o $(BUILD_DIR)/$(BINARY_NAME)-linux-arm64 .
+	@GOOS=darwin GOARCH=amd64 go build -mod=readonly -trimpath -ldflags "$(LDFLAGS)" -o $(BUILD_DIR)/$(BINARY_NAME)-darwin-amd64 .
+	@GOOS=darwin GOARCH=arm64 go build -mod=readonly -trimpath -ldflags "$(LDFLAGS)" -o $(BUILD_DIR)/$(BINARY_NAME)-darwin-arm64 .
+	@GOOS=windows GOARCH=amd64 go build -mod=readonly -trimpath -ldflags "$(LDFLAGS)" -o $(BUILD_DIR)/$(BINARY_NAME)-windows-amd64.exe .
+	@echo "Build complete. Binaries in $(BUILD_DIR)/"
 
 .PHONY: clean
-clean:
-	\rm -rf $(BUILD_DIR)
+clean: ## Clean build artifacts
+	@echo "Cleaning..."
+	@rm -rf $(BUILD_DIR) dist/ coverage.out coverage.html
 
 .PHONY: snapshot
-snapshot:
-	LDFLAGS="$(LDFLAGS)" \goreleaser release --clean --snapshot --timeout 120m
-	
-.PHONY: release
-release:
-	LDFLAGS="$(LDFLAGS)" \goreleaser release --clean --timeout 120m
+snapshot: ## Create a snapshot release (without publishing)
+	@echo "Creating snapshot release..."
+	@goreleaser release --clean --snapshot --skip=publish
 
-.PHONY: updatedeps
-updatedeps:
-	go get -u all
+.PHONY: release
+release: ## Create a release (requires proper git tag)
+	@echo "Creating release..."
+	@goreleaser release --clean
+
+.PHONY: update-deps
+update-deps: ## Update all dependencies
+	@echo "Updating dependencies..."
+	@go get -u ./...
+	@go mod tidy
+
+.PHONY: tidy
+tidy: ## Run go mod tidy
+	@echo "Tidying go.mod..."
+	@go mod tidy
