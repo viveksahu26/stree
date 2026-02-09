@@ -61,12 +61,7 @@ nfpms:
       - apk
       - deb
       - rpm
-    bindir: /usr/bin
-    contents:
-      - src: LICENSE
-        dst: /usr/share/doc/stree/LICENSE
-        file_info:
-          mode: 0644
+
 
 archives:
   - id: stree
